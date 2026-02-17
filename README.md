@@ -1,4 +1,4 @@
-Kali Purple Labs
+# Cybersecurity Labs
 
 This repository contains documentation of my cybersecurity labs carried out in Kali Linux and Kali Purple.
 It includes penetration testing exercises, defensive blue team labs, and notes from practical experiments.
