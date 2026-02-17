@@ -1,6 +1,6 @@
-# Cybersecurity Labs
+# Cybersecurity Labs Portfolio
 
-This repository contains documentation of my cybersecurity labs carried out in Kali Linux and Kali Purple.
+This repository contains documentation of my hands-on cybersecurity labs carried out in Kali Linux, Kali Purple, and related defensive and offensive environments.
 It includes penetration testing exercises, defensive blue team labs, and notes from practical experiments.
 The goal is to build a portfolio that shows hands-on skills in real security tools and workflows.
 
