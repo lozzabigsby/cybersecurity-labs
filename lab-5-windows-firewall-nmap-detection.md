@@ -71,3 +71,22 @@ These entries indicate that the Windows firewall detected and blocked scanning a
 This lab demonstrates how basic reconnaissance activity can be detected using native Windows logging.
 
 Even simple Nmap scans generate identifiable patterns in firewall logs, providing visibility into potential malicious activity.
+
+## Nmap Scan Results
+
+![Nmap Scan 1](nmap-scan-1.png)
+![Nmap Scan 2](nmap-scan-2.png)
+![Nmap Scan 3](nmap-scan-3.png)
+![Nmap Scan 4](nmap-scan-4.png)
+
+---
+
+## Firewall Logging Enabled
+
+![Firewall Logging](firewall-logging-enabled.png)
+
+---
+
+## Detection in Firewall Logs
+
+![Firewall Detection](logfile-detection.png)
