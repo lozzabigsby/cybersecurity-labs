@@ -31,7 +31,6 @@ The purpose of this repository is to demonstrate practical security analysis, de
 - Kali Linux  
 - Kali Purple  
 - Windows Incident Response (manual malware remediation case study)
-- Kali Linux
 - Burp Suite (Proxy Interception)
 - OWASP Juice Shop (Docker)
 
