@@ -12,6 +12,7 @@ The purpose of this repository is to demonstrate practical security analysis, de
 - [Lab 2: Suricata and Zeek Network Detection](lab-2-suricata-zeek.md)
 - [Lab 3: Windows Incident Response](lab-3-windows-incident-response.md)
 - [Lab 4: SQL Injection Login Bypass](lab-4-sql-injection-login-bypass.md)
+- [Lab 5: Windows Firewall Nmap Detection](lab-5-windows-firewall-nmap-detection.md)
 ---
 
 ## 🎯 Objectives
@@ -30,6 +31,9 @@ The purpose of this repository is to demonstrate practical security analysis, de
 - Kali Linux  
 - Kali Purple  
 - Windows Incident Response (manual malware remediation case study)
+- Kali Linux
+- Burp Suite (Proxy Interception)
+- OWASP Juice Shop (Docker)
 
 ---
 
