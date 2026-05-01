@@ -10,7 +10,8 @@ The purpose of this repository is to demonstrate practical security analysis, de
 
 - [Lab 1: Penetration Testing Basics](lab-1-pentest.md)
 - [Lab 2: Suricata and Zeek Network Detection](lab-2-suricata-zeek.md)
-
+- [Lab 3: Windows Incident Response](lab-3-windows-incident-response.md)
+- [Lab 4: SQL Injection Login Bypass](lab-4-sql-injection-login-bypass.md)
 ---
 
 ## 🎯 Objectives
