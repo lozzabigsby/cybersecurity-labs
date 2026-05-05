@@ -48,43 +48,37 @@ The purpose of this lab was to understand how PowerShell-related activity can ap
 
 ## Evidence Collected
 
-### 01 - Wazuh Agents
-
-This screenshot shows the Wazuh dashboard displaying connected agent information.
-
-![Wazuh Agents](01-wazuh-agents.png)
-
-### 02 - Wazuh Dashboard
+### 01 - Wazuh Dashboard
 
 This screenshot shows the main Wazuh dashboard used during the investigation.
 
 ![Wazuh Dashboard](02-wazuh-dashboard.png)
 
-### 03 - Windows Agent Service Started
+### 02 - Windows Agent Service Started
 
 This screenshot shows the Wazuh Windows agent service running on the Windows VM.
 
 ![Windows Agent Service Started](03-windows-agent-service-started.png)
 
-### 04 - Sysmon Installed
+### 03 - Sysmon Installed
 
 This screenshot shows Sysmon installed on the Windows VM, improving endpoint visibility.
 
 ![Sysmon Installed](04-sysmon-installed.png)
 
-### 05 - Wazuh Service Running After Sysmon Configuration
+### 04 - Wazuh Service Running After Sysmon Configuration
 
 This screenshot shows the Wazuh service running after Sysmon configuration was applied.
 
 ![Wazuh Service Running After Sysmon Config](05-wazuh-service-running-after-sysmon-config.png)
 
-### 06 - Threat Hunting Alerts
+### 05 - Threat Hunting Alerts
 
 This screenshot shows Wazuh threat hunting alerts from the Windows victim machine.
 
 ![Threat Hunting Windows Victim Alerts](06-threat-hunting-win-victim-alerts.png)
 
-### 07 - Sysmon Search Results
+### 06 - Sysmon Search Results
 
 This screenshot shows Sysmon-related event data being reviewed in the Wazuh dashboard.
 
