@@ -41,8 +41,9 @@ The purpose of this lab was to understand how PowerShell-related activity can ap
 4. Generated PowerShell activity on the Windows machine.
 5. Opened the Wazuh dashboard.
 6. Searched for PowerShell-related activity.
-7. Reviewed Sysmon and Windows event log data.
-8. Captured screenshots as evidence of the investigation.
+7. Reviewed Wazuh threat hunting alerts from the Windows victim machine.
+8. Expanded Sysmon event details to inspect rule and event data.
+9. Captured screenshots as evidence of the investigation.
 
 ---
 
@@ -84,23 +85,25 @@ This screenshot shows Sysmon-related event data being reviewed in the Wazuh dash
 
 ![Sysmon Search Results](07-sysmon-search-win-victim.png)
 
+### 07 - PowerShell Alerts in Wazuh
+
+This screenshot shows PowerShell-related alerts from the Windows victim machine inside the Wazuh dashboard.
+
+![Windows Victim PowerShell Alerts in Wazuh](08-win-victim-powershell-alerts-in-wazuh.png)
+
+### 08 - Expanded Sysmon Rule Details
+
+This screenshot shows the expanded Sysmon event details, including Wazuh rule information for rule `92201`.
+
+![Expanded Sysmon Rule 92201 Details](09-expanded-sysmon-rule-92201-details.png)
+
 During the investigation, PowerShell-related activity was visible inside the Wazuh dashboard.
 
 The investigation also showed Sysmon event data from the Windows VM, confirming that endpoint activity was being collected and sent to Wazuh.
 
-Some fields commonly shown in tutorials, such as:
+The expanded event view provided more detail than the summary table view. In the summary view, some fields were not immediately visible, but by expanding the event it was possible to inspect more detailed rule and event information.
 
-- `data.win.system.channel`
-- `data.win.system.eventID`
-- `data.win.eventdata.image`
-- `data.win.eventdata.commandLine`
-- `rule.description`
-
-were not clearly visible in my dashboard view during this lab.
-
-This may have been caused by differences in the Sysmon configuration, Wazuh field parsing, dashboard view, or the specific event type generated during testing.
-
-This was still useful because it showed that real investigations do not always match tutorials exactly. Analysts often need to work with the available data and adapt their investigation based on what is actually present.
+This was useful because it showed that real investigations do not always match tutorials exactly. Analysts often need to expand events, adjust dashboard columns, and review the available fields before deciding what evidence is useful.
 
 ---
 
@@ -120,7 +123,7 @@ Suspicious PowerShell activity may indicate:
 - Downloading files from the internet
 - Reconnaissance on the local system
 
-Because PowerShell is also used by legitimate administrators, it is important to review the context of the command, the user account, the parent process, and the system involved before deciding whether the activity is malicious.
+Because PowerShell is also used by legitimate administrators, it is important to review the context of the command, the user account, the parent process, the rule triggered, and the system involved before deciding whether the activity is malicious.
 
 ---
 
@@ -132,7 +135,9 @@ PowerShell-related activity could be searched and reviewed inside the Wazuh dash
 
 Sysmon improved the level of endpoint visibility available for investigation.
 
-Although not all expected event fields appeared exactly as expected, useful event data was still available and the investigation could continue.
+Wazuh threat hunting showed alerts from the Windows victim machine, and the expanded event view showed more detailed Sysmon rule information, including rule `92201`.
+
+Although the summary dashboard view did not show every useful field immediately, useful event data was available after expanding the relevant alert.
 
 ---
 
@@ -140,9 +145,9 @@ Although not all expected event fields appeared exactly as expected, useful even
 
 This lab helped me understand the basic process of investigating endpoint activity using Wazuh.
 
-The main lesson from this scenario was that detection data can vary depending on how tools are configured. In a real-world environment, an analyst may not always see the exact fields shown in documentation or tutorials.
+The main lesson from this scenario was that detection data can vary depending on how tools are configured and how the dashboard is displaying event fields. In a real-world environment, an analyst may need to expand alerts or adjust visible columns to find the most useful information.
 
-Instead of assuming the lab has failed, the correct approach is to review the available fields, search around the event data, and use screenshots or logs to support the investigation.
+Instead of assuming the lab has failed when fields are not immediately visible, the correct approach is to inspect the full event, search around the event data, and use screenshots or logs to support the investigation.
 
 This scenario also showed why Sysmon is valuable. Windows logs alone can provide useful information, but Sysmon adds more detailed process and endpoint telemetry, which can improve detection and investigation.
 
@@ -152,9 +157,9 @@ This scenario also showed why Sysmon is valuable. Windows logs alone can provide
 
 This scenario demonstrated a basic suspicious PowerShell investigation using Wazuh and Sysmon.
 
-The lab confirmed that endpoint activity from a Windows VM could be collected, searched, and reviewed through the Wazuh dashboard.
+The lab confirmed that endpoint activity from a Windows VM could be collected, searched, expanded, and reviewed through the Wazuh dashboard.
 
-This forms a useful beginner-level SOC investigation workflow and provides evidence of practical experience with endpoint monitoring, log analysis, and security event investigation.
+This forms a useful beginner-level SOC investigation workflow and provides evidence of practical experience with endpoint monitoring, log analysis, alert review, and security event investigation.
 
 ---
 
@@ -166,5 +171,6 @@ This forms a useful beginner-level SOC investigation workflow and provides evide
 - PowerShell activity analysis
 - Basic SOC investigation workflow
 - Security event searching
+- Alert expansion and rule review
 - Evidence collection through screenshots
 - Understanding of living-off-the-land techniques
