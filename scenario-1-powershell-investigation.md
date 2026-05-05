@@ -159,6 +159,6 @@ This forms a useful beginner-level SOC investigation workflow and provides evide
 
 ---
 
-## Screenshot Notes
+## Repository Screenshot Status
 
-The screenshots currently linked above are the ones with confirmed exact filenames in this repository. Additional screenshots can be added once their full filenames are confirmed.
+The screenshots linked above are the repository image files I could verify by exact filename. The repository also contains additional Wazuh lab screenshots uploaded at the same time, but their displayed names are truncated in the GitHub view. Those can be linked once their exact filenames are visible.
