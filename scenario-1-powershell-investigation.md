@@ -48,25 +48,43 @@ The purpose of this lab was to understand how PowerShell-related activity can ap
 
 ## Evidence Collected
 
-### Wazuh Agents
+### 01 - Wazuh Agents
 
 This screenshot shows the Wazuh dashboard displaying connected agent information.
 
-![Wazuh Agents](Wahzu%20Agents.png)
+![Wazuh Agents](01-wazuh-agents.png)
 
-### Wazuh Dashboard
+### 02 - Wazuh Dashboard
 
 This screenshot shows the main Wazuh dashboard used during the investigation.
 
-![Wazuh Dashboard](Wahzu%20dashboard.png)
+![Wazuh Dashboard](02-wazuh-dashboard.png)
 
-### Sysmon Installed
+### 03 - Windows Agent Service Started
+
+This screenshot shows the Wazuh Windows agent service running on the Windows VM.
+
+![Windows Agent Service Started](03-windows-agent-service-started.png)
+
+### 04 - Sysmon Installed
 
 This screenshot shows Sysmon installed on the Windows VM, improving endpoint visibility.
 
 ![Sysmon Installed](04-sysmon-installed.png)
 
-### Sysmon Search Results
+### 05 - Wazuh Service Running After Sysmon Configuration
+
+This screenshot shows the Wazuh service running after Sysmon configuration was applied.
+
+![Wazuh Service Running After Sysmon Config](05-wazuh-service-running-after-sysmon-config.png)
+
+### 06 - Threat Hunting Alerts
+
+This screenshot shows Wazuh threat hunting alerts from the Windows victim machine.
+
+![Threat Hunting Windows Victim Alerts](06-threat-hunting-win-victim-alerts.png)
+
+### 07 - Sysmon Search Results
 
 This screenshot shows Sysmon-related event data being reviewed in the Wazuh dashboard.
 
@@ -156,9 +174,3 @@ This forms a useful beginner-level SOC investigation workflow and provides evide
 - Security event searching
 - Evidence collection through screenshots
 - Understanding of living-off-the-land techniques
-
----
-
-## Repository Screenshot Status
-
-The screenshots linked above are the repository image files I could verify by exact filename. The repository also contains additional Wazuh lab screenshots uploaded at the same time, but their displayed names are truncated in the GitHub view. Those can be linked once their exact filenames are visible.
