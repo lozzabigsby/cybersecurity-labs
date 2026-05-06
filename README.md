@@ -1,74 +1,112 @@
 # Cybersecurity Labs Portfolio
 
-This repository documents my hands-on cybersecurity labs across offensive and defensive environments. It includes penetration testing exercises, network detection labs, endpoint monitoring, and structured incident response investigations using industry-standard tools.
+This repository documents my hands-on cybersecurity labs across offensive and defensive security environments.
 
-The purpose of this repository is to demonstrate practical security analysis, detection engineering, log investigation, and offensive testing skills through clear documentation and repeatable workflows.
+The portfolio includes:
 
----
+- Penetration testing labs
+- Windows and Linux investigations
+- Wazuh SOC monitoring scenarios
+- Network detection and log analysis
+- Incident response case studies
+- Web application security testing
 
-## 📚 Lab Journal
-
-- [Lab 1: Penetration Testing Basics](lab-1-pentest.md)
-- [Lab 2: Suricata and Zeek Network Detection](lab-2-suricata-zeek.md)
-- [Lab 3: Windows Incident Response](lab-3-windows-incident-response.md)
-- [Lab 4: SQL Injection Login Bypass](lab-4-sql-injection-login-bypass.md)
-- [Lab 5: Windows Firewall Nmap Detection](lab-5-windows-firewall-nmap-detection.md)
-- [Lab 6: Wazuh SOC Lab - Phase 1: Suspicious PowerShell Investigation](scenario-1-powershell-investigation.md)
-- [Lab 7: Wazuh SOC Lab - Phase 2: SSH Brute Force Detection](lab-7-wazuh-linux-ssh-investigation.md)
+The goal of this repository is to demonstrate practical cybersecurity skills through structured investigations, technical documentation, evidence collection, and repeatable lab workflows.
 
 ---
 
-## 🎯 Objectives
+# 📚 Lab Portfolio
 
-- Reinforce cybersecurity knowledge through structured, hands-on labs  
-- Build a professional portfolio for SOC, blue team, and offensive security roles  
-- Document investigations in a format aligned with real-world security operations  
-- Practise analysing alerts, logs, rules, and endpoint telemetry  
+## Offensive Security
 
----
-
-## 🛠️ Tools & Technologies
-
-- Wazuh  
-- Wazuh Dashboard  
-- Sysmon  
-- Windows Event Logs  
-- VMware Workstation Pro  
-- Windows VM  
-- Nmap  
-- Suricata (IDS/IPS)  
-- Zeek (Network Analysis)  
-- Kali Linux  
-- Kali Purple  
-- Windows Incident Response (manual malware remediation case study)
-- Burp Suite (Proxy Interception)
-- OWASP Juice Shop (Docker)
+| Lab | Description |
+|---|---|
+| [Lab 1: Penetration Testing Basics](lab-1-pentest.md) | Basic enumeration and weak credential testing using Kali Linux and Metasploitable2 |
+| [Lab 4: SQL Injection Login Bypass](lab-4-sql-injection-login-bypass.md) | Authentication bypass using SQL injection against OWASP Juice Shop |
 
 ---
 
-## 🔍 Focus Areas
+## Detection Engineering & Network Monitoring
 
-- Network traffic analysis  
-- Intrusion detection and alert investigation  
-- Endpoint monitoring and log analysis  
-- Host-based persistence analysis  
-- Sysmon event review  
-- Wazuh threat hunting  
-- Malware behaviour observation in controlled environments  
-- Penetration testing methodology  
+| Lab | Description |
+|---|---|
+| [Lab 2: Suricata and Zeek Network Detection](lab-2-suricata-zeek.md) | IDS alerting, network metadata analysis, and custom Suricata rule creation |
+| [Lab 5: Windows Firewall Nmap Detection](lab-5-windows-firewall-nmap-detection.md) | Detecting reconnaissance activity using native Windows firewall logs |
 
 ---
 
-## 🔮 Next Steps
+## SOC & Security Monitoring
 
-- Add more Wazuh-based SOC investigation scenarios  
-- Document SSH brute-force detection using Kali and a Linux victim machine  
-- Add file integrity monitoring and web shell detection labs  
-- Expand Suricata integration and vulnerability detection scenarios  
-- Build a broader SOC-style investigation portfolio  
+| Lab | Description |
+|---|---|
+| [Lab 6: Wazuh SOC Lab - Phase 1: Suspicious PowerShell Investigation](scenario-1-powershell-investigation.md) | Endpoint telemetry investigation using Wazuh and Sysmon |
+| [Lab 7: Wazuh SOC Lab - Phase 2: SSH Brute Force Detection](lab-7-wazuh-linux-ssh-investigation.md) | Linux authentication monitoring and SSH brute-force alert investigation |
 
 ---
 
-## 📌 Ongoing Development
+## Incident Response
 
-This repository will continue evolving as I build deeper technical capability across detection, response, endpoint monitoring, and offensive security.
+| Lab | Description |
+|---|---|
+| [Lab 3: Windows Incident Response](lab-3-windows-incident-response.md) | Malware investigation, persistence analysis, and containment workflow |
+
+---
+
+# 🛠️ Technologies & Platforms
+
+- Wazuh
+- Sysmon
+- Windows Event Logs
+- Kali Linux
+- Kali Purple
+- Ubuntu Linux
+- VMware Workstation Pro
+- Suricata
+- Zeek
+- Nmap
+- Hydra
+- Burp Suite
+- OWASP Juice Shop
+- Windows Defender Firewall
+
+---
+
+# 🎯 Skills Demonstrated
+
+- Security event investigation
+- Endpoint monitoring
+- Windows and Linux log analysis
+- Threat hunting
+- Network traffic analysis
+- Intrusion detection
+- Incident response workflows
+- Web application testing
+- Firewall log analysis
+- SOC investigation methodology
+- Security documentation and evidence collection
+
+---
+
+# 📌 Repository Organisation
+
+Repository cleanup and restructuring notes can be found here:
+
+- [Repository Structure Guide](STRUCTURE.md)
+
+---
+
+# 🔮 Planned Future Labs
+
+- File integrity monitoring
+- Web shell detection
+- Vulnerability detection with Wazuh
+- Additional Linux investigation scenarios
+- Active Directory attack simulations
+- Detection engineering rule tuning
+- Threat hunting investigations
+
+---
+
+# 📈 Ongoing Development
+
+This portfolio will continue expanding as I build deeper practical capability across cybersecurity, detection engineering, SOC operations, endpoint monitoring, and incident response.
