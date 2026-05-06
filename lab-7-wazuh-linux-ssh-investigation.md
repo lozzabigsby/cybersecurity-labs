@@ -218,11 +218,11 @@ This is a useful beginner SOC investigation because it follows the same logic an
 
 ## Conclusion
 
-This lab demonstrated a basic SSH brute-force detection workflow using Kali Linux, an Ubuntu victim machine, and Wazuh.
+This lab demonstrated an SSH brute-force detection workflow using Kali Linux, an Ubuntu victim machine, and Wazuh.
 
-The lab confirmed that failed SSH authentication activity could be generated, logged on the Linux victim, forwarded by the Wazuh agent, and reviewed in the Wazuh dashboard.
+The exercise focused on generating failed authentication activity, reviewing Linux authentication logs, and analysing Wazuh alerts within a controlled lab environment.
 
-This provides practical evidence of Linux log review, Wazuh alert investigation, SSH authentication analysis, and controlled attack simulation in a lab environment.
+This provides practical evidence of Linux log analysis, Wazuh alert investigation, SSH authentication monitoring, and SOC-style security event investigation.
 
 ---
 
