@@ -37,26 +37,19 @@ This portfolio demonstrates practical experience in:
 
 ---
 
-## Current SOC Lab Series
+## Wazuh SOC Lab Series
 
-I am currently building a Wazuh-based SOC lab series using virtual machines and controlled attack/detection scenarios.
+This section tracks the SOC investigation series I am building with Wazuh, virtual machines, and controlled attack/detection scenarios.
 
-Planned scenarios include:
+Only completed labs are linked in the table above. The items below are the planned next investigations and will be added as proper lab files once completed.
 
-1. **Suspicious PowerShell Investigation**  
-   Completed. Investigated PowerShell activity from a Windows VM using Wazuh, Sysmon, Windows Event Logs, and Wazuh dashboard evidence.
-
-2. **SSH Brute Force Detection**  
-   Planned. Kali attacker machine against a Linux victim, with detection and evidence reviewed in Wazuh.
-
-3. **File Integrity Monitoring / Web Shell Detection**  
-   Planned. Monitoring unexpected file changes and suspicious web activity.
-
-4. **Suricata Integration**  
-   Planned. Network IDS alerting and investigation workflow.
-
-5. **Vulnerability Detection**  
-   Planned. Vulnerability visibility, triage, and reporting using security tooling.
+| Status | Planned Lab | Focus |
+|---|---|---|
+| Completed | Suspicious PowerShell Investigation | PowerShell activity reviewed in Wazuh using Sysmon and Windows Event Logs |
+| Next | Lab 7: SSH Brute Force Detection | Kali attacker machine against a Linux victim, with detection and evidence reviewed in Wazuh |
+| Planned | File Integrity Monitoring / Web Shell Detection | Monitoring unexpected file changes and suspicious web activity |
+| Planned | Suricata Integration | Network IDS alerting and investigation workflow |
+| Planned | Vulnerability Detection | Vulnerability visibility, triage, and reporting using security tooling |
 
 ---
 
@@ -114,7 +107,7 @@ The aim is to demonstrate that I can:
 
 ## Next Improvements
 
-- Add more Wazuh SOC investigation scenarios
+- Complete Lab 7: SSH Brute Force Detection
 - Improve each lab with clearer screenshots and evidence sections
 - Add incident report summaries for each completed scenario
 - Build a stronger structure for blue team and offensive security labs
