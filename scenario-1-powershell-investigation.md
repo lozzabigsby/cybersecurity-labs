@@ -155,11 +155,11 @@ This scenario also showed why Sysmon is valuable. Windows logs alone can provide
 
 ## Conclusion
 
-This scenario demonstrated a basic suspicious PowerShell investigation using Wazuh and Sysmon.
+This scenario demonstrated a practical suspicious PowerShell investigation using Wazuh and Sysmon.
 
-The lab confirmed that endpoint activity from a Windows VM could be collected, searched, expanded, and reviewed through the Wazuh dashboard.
+The lab involved monitoring endpoint telemetry, analysing security events, and identifying potentially suspicious PowerShell activity within a controlled virtual lab environment.
 
-This forms a useful beginner-level SOC investigation workflow and provides evidence of practical experience with endpoint monitoring, log analysis, alert review, and security event investigation.
+This provides practical evidence of endpoint monitoring, log analysis, alert investigation, and SOC-style security event analysis using Wazuh and Sysmon.
 
 ---
 
