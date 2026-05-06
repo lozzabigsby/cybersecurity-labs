@@ -1,5 +1,12 @@
 # Cybersecurity Labs Portfolio
 
+![Wazuh](https://img.shields.io/badge/Wazuh-SIEM-blue)
+![Sysmon](https://img.shields.io/badge/Sysmon-Endpoint%20Telemetry-green)
+![Kali Linux](https://img.shields.io/badge/Kali-Linux-purple)
+![SOC](https://img.shields.io/badge/SOC-Investigations-red)
+![Blue Team](https://img.shields.io/badge/Blue-Team-darkblue)
+![Incident Response](https://img.shields.io/badge/Incident-Response-orange)
+
 This repository documents my hands-on cybersecurity labs across offensive and defensive security environments.
 
 The portfolio includes:
@@ -15,18 +22,18 @@ The goal of this repository is to demonstrate practical cybersecurity skills thr
 
 ---
 
-# 📚 Lab Portfolio
+# SOC Investigations
 
-## Offensive Security
+## Wazuh Security Monitoring
 
-| Lab | Description |
+| Investigation | Focus Area |
 |---|---|
-| [Lab 1: Penetration Testing Basics](lab-1-pentest.md) | Basic enumeration and weak credential testing using Kali Linux and Metasploitable2 |
-| [Lab 4: SQL Injection Login Bypass](lab-4-sql-injection-login-bypass.md) | Authentication bypass using SQL injection against OWASP Juice Shop |
+| [Lab 6: Wazuh SOC Lab - Phase 1: Suspicious PowerShell Investigation](scenario-1-powershell-investigation.md) | Endpoint telemetry investigation using Wazuh and Sysmon |
+| [Lab 7: Wazuh SOC Lab - Phase 2: SSH Brute Force Detection](lab-7-wazuh-linux-ssh-investigation.md) | Linux authentication monitoring and SSH brute-force alert investigation |
 
 ---
 
-## Detection Engineering & Network Monitoring
+# Detection Engineering & Network Monitoring
 
 | Lab | Description |
 |---|---|
@@ -35,16 +42,16 @@ The goal of this repository is to demonstrate practical cybersecurity skills thr
 
 ---
 
-## SOC & Security Monitoring
+# Offensive Security
 
 | Lab | Description |
 |---|---|
-| [Lab 6: Wazuh SOC Lab - Phase 1: Suspicious PowerShell Investigation](scenario-1-powershell-investigation.md) | Endpoint telemetry investigation using Wazuh and Sysmon |
-| [Lab 7: Wazuh SOC Lab - Phase 2: SSH Brute Force Detection](lab-7-wazuh-linux-ssh-investigation.md) | Linux authentication monitoring and SSH brute-force alert investigation |
+| [Lab 1: Penetration Testing Basics](lab-1-pentest.md) | Basic enumeration and weak credential testing using Kali Linux and Metasploitable2 |
+| [Lab 4: SQL Injection Login Bypass](lab-4-sql-injection-login-bypass.md) | Authentication bypass using SQL injection against OWASP Juice Shop |
 
 ---
 
-## Incident Response
+# Incident Response
 
 | Lab | Description |
 |---|---|
@@ -52,7 +59,13 @@ The goal of this repository is to demonstrate practical cybersecurity skills thr
 
 ---
 
-# 🛠️ Technologies & Platforms
+# Architecture Diagrams
+
+- [Cybersecurity Lab Diagrams](DIAGRAMS.md)
+
+---
+
+# Technologies & Platforms
 
 - Wazuh
 - Sysmon
@@ -71,7 +84,7 @@ The goal of this repository is to demonstrate practical cybersecurity skills thr
 
 ---
 
-# 🎯 Skills Demonstrated
+# Skills Demonstrated
 
 - Security event investigation
 - Endpoint monitoring
@@ -87,15 +100,16 @@ The goal of this repository is to demonstrate practical cybersecurity skills thr
 
 ---
 
-# 📌 Repository Organisation
+# Repository Organisation
 
 Repository cleanup and restructuring notes can be found here:
 
 - [Repository Structure Guide](STRUCTURE.md)
+- [Image Reorganisation Script](scripts/reorganise-images.ps1)
 
 ---
 
-# 🔮 Planned Future Labs
+# Planned Future Labs
 
 - File integrity monitoring
 - Web shell detection
@@ -107,6 +121,6 @@ Repository cleanup and restructuring notes can be found here:
 
 ---
 
-# 📈 Ongoing Development
+# Ongoing Development
 
 This portfolio will continue expanding as I build deeper practical capability across cybersecurity, detection engineering, SOC operations, endpoint monitoring, and incident response.
