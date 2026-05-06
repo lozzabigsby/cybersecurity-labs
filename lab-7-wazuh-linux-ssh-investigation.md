@@ -1,4 +1,4 @@
-# Lab 7: SSH Brute Force Detection with Wazuh and Linux
+# Lab 7: Wazuh SOC Lab - Phase 2: SSH Brute Force Detection
 
 ## Objective
 
