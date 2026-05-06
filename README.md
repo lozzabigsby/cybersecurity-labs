@@ -14,6 +14,7 @@ The purpose of this repository is to demonstrate practical security analysis, de
 - [Lab 4: SQL Injection Login Bypass](lab-4-sql-injection-login-bypass.md)
 - [Lab 5: Windows Firewall Nmap Detection](lab-5-windows-firewall-nmap-detection.md)
 - [Lab 6: Suspicious PowerShell Investigation with Wazuh and Sysmon](scenario-1-powershell-investigation.md)
+- [Lab 7: Wazuh Linux SSH Investigation and Troubleshooting](lab-7-wazuh-linux-ssh-investigation.md)
 
 ---
 
