@@ -1,4 +1,4 @@
-# Scenario 1: Suspicious PowerShell Investigation
+# Lab 6: Wazuh SOC Lab - Phase 1: Suspicious PowerShell Investigation
 
 ## Objective
 
