@@ -28,8 +28,8 @@ The goal of this repository is to demonstrate practical cybersecurity skills thr
 
 | Investigation | Focus Area |
 |---|---|
-| [Lab 6: Wazuh SOC Lab - Phase 1: Suspicious PowerShell Investigation](scenario-1-powershell-investigation.md) | Endpoint telemetry investigation using Wazuh and Sysmon |
-| [Lab 7: Wazuh SOC Lab - Phase 2: SSH Brute Force Detection](lab-7-wazuh-linux-ssh-investigation.md) | Linux authentication monitoring and SSH brute-force alert investigation |
+| [Lab 6 - Scenario 1: Suspicious PowerShell Investigation](lab-6-scenario-1-powershell-investigation.md) | Endpoint telemetry investigation using Wazuh and Sysmon |
+| [Lab 7 - Scenario 2: SSH Brute Force Detection](lab-7-scenario-2-ssh-brute-force-detection.md) | Linux authentication monitoring and SSH brute-force alert investigation |
 
 ---
 
