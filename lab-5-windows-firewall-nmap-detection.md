@@ -34,7 +34,9 @@ Network:
 
 An Nmap scan was performed against the target machine:
 
+```bash
 nmap -A 192.168.11.1
+```
 
 Results:
 - Port 80/tcp open (HTTP)
@@ -51,7 +53,7 @@ Windows Defender Firewall logging was enabled to capture both allowed and droppe
 Log settings:
 - Log dropped packets: Enabled
 - Log successful connections: Enabled
-- Log file: C:\Windows\System32\LogFiles\Firewall\pfirewall.log
+- Log file: `C:\Windows\System32\LogFiles\Firewall\pfirewall.log`
 
 ---
 
@@ -60,9 +62,31 @@ Log settings:
 Analysis of the firewall logs revealed multiple dropped connection attempts from the attacker machine.
 
 Example:
-DROP TCP 192.168.11.128 → 192.168.11.1
+
+```text
+DROP TCP 192.168.11.128 -> 192.168.11.1
+```
 
 These entries indicate that the Windows firewall detected and blocked scanning activity originating from the Kali machine.
+
+---
+
+## Evidence Collected
+
+### Nmap Scan Results
+
+![Nmap Scan 1](labs/lab-05-windows-firewall-nmap-detection/screenshots/01-nmap-scan.png)
+![Nmap Scan 2](labs/lab-05-windows-firewall-nmap-detection/screenshots/02-nmap-scan.png)
+![Nmap Scan 3](labs/lab-05-windows-firewall-nmap-detection/screenshots/03-nmap-scan.png)
+![Nmap Scan 4](labs/lab-05-windows-firewall-nmap-detection/screenshots/04-nmap-scan.png)
+
+### Firewall Logging Enabled
+
+![Firewall Logging](labs/lab-05-windows-firewall-nmap-detection/screenshots/05-firewall-logging-enabled.png)
+
+### Detection in Firewall Logs
+
+![Firewall Detection](labs/lab-05-windows-firewall-nmap-detection/screenshots/06-firewall-log-detection.png)
 
 ---
 
@@ -71,22 +95,3 @@ These entries indicate that the Windows firewall detected and blocked scanning a
 This lab demonstrates how basic reconnaissance activity can be detected using native Windows logging.
 
 Even simple Nmap scans generate identifiable patterns in firewall logs, providing visibility into potential malicious activity.
-
-## Nmap Scan Results
-
-![Nmap Scan 1](nmap-scan-1.png)
-![Nmap Scan 2](nmap-scan-2.png)
-![Nmap Scan 3](nmap-scan-3.png)
-![Nmap Scan 4](nmap-scan-4.png)
-
----
-
-## Firewall Logging Enabled
-
-![Firewall Logging](firewall-logging-enabled.png)
-
----
-
-## Detection in Firewall Logs
-
-![Firewall Detection](logfile-detection.png)
