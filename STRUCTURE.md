@@ -1,10 +1,12 @@
 # Repository Structure
 
-This repository is being organised as a cybersecurity portfolio rather than a loose file dump.
+This repository is organised as a cybersecurity portfolio rather than a loose file dump.
 
 ## Current layout
 
-The main lab write-ups currently live as Markdown files in the repository root. Screenshot evidence also currently lives in the root so existing image links continue to work.
+The main lab write-ups currently live as Markdown files in the repository root for easy portfolio navigation.
+
+Screenshot evidence is now stored inside lab-specific folders under `labs/`, so the repository root stays clean while each investigation keeps its supporting evidence organised.
 
 ## Lab index
 
@@ -15,36 +17,39 @@ The main lab write-ups currently live as Markdown files in the repository root. 
 | Lab 3 | Incident response | [Windows Incident Response](lab-3-windows-incident-response.md) |
 | Lab 4 | Web security | [SQL Injection Login Bypass](lab-4-sql-injection-login-bypass.md) |
 | Lab 5 | Windows logging | [Windows Firewall Nmap Detection](lab-5-windows-firewall-nmap-detection.md) |
-| Lab 6 | SOC / endpoint monitoring | [Suspicious PowerShell Investigation](scenario-1-powershell-investigation.md) |
-| Lab 7 | SOC / Linux authentication | [SSH Brute Force Detection](lab-7-wazuh-linux-ssh-investigation.md) |
+| Lab 6 - Scenario 1 | SOC / endpoint monitoring | [Suspicious PowerShell Investigation](lab-6-scenario-1-powershell-investigation.md) |
+| Lab 7 - Scenario 2 | SOC / Linux authentication | [SSH Brute Force Detection](lab-7-scenario-2-ssh-brute-force-detection.md) |
 
-## Target structure
-
-The long-term structure should move toward:
+## Current structure
 
 ```text
 cybersecurity-labs/
 ├── README.md
 ├── STRUCTURE.md
+├── DIAGRAMS.md
+├── lab-1-pentest.md
+├── lab-2-suricata-zeek.md
+├── lab-3-windows-incident-response.md
+├── lab-4-sql-injection-login-bypass.md
+├── lab-5-windows-firewall-nmap-detection.md
+├── lab-6-scenario-1-powershell-investigation.md
+├── lab-7-scenario-2-ssh-brute-force-detection.md
 ├── labs/
-│   ├── lab-01-pentest-basics/
-│   ├── lab-02-suricata-zeek/
-│   ├── lab-03-windows-incident-response/
-│   ├── lab-04-sql-injection-login-bypass/
 │   ├── lab-05-windows-firewall-nmap-detection/
+│   │   └── screenshots/
 │   ├── lab-06-wazuh-powershell-investigation/
+│   │   └── screenshots/
 │   └── lab-07-wazuh-ssh-bruteforce-detection/
-└── screenshots/
-    ├── lab-05/
-    ├── lab-06/
-    └── lab-07/
+│       └── screenshots/
+└── scripts/
+    └── reorganise-images.ps1
 ```
 
 ## Cleanup rules
 
 - Keep one clear README as the portfolio front page.
 - Keep each lab write-up consistent: objective, tools, steps, evidence, findings, conclusion, skills demonstrated.
-- Store screenshots by lab number once the image links are safely migrated.
+- Store screenshot evidence inside the relevant lab folder.
 - Avoid vague labels like `image1.png` where possible.
-- Use consistent lab numbering: `lab-01`, `lab-02`, `lab-03`.
+- Use consistent lab numbering and scenario naming.
 - Do not delete screenshot evidence unless the relevant write-up has already been updated.
