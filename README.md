@@ -30,6 +30,7 @@ The goal of this repository is to demonstrate practical cybersecurity skills thr
 |---|---|
 | [Lab 6 - Scenario 1: Suspicious PowerShell Investigation](lab-6-scenario-1-powershell-investigation.md) | Endpoint telemetry investigation using Wazuh and Sysmon |
 | [Lab 7 - Scenario 2: SSH Brute Force Detection](lab-7-scenario-2-ssh-brute-force-detection.md) | Linux authentication monitoring and SSH brute-force alert investigation |
+| [Lab 8 - Scenario 3: File Integrity Monitoring and Web Shell Detection](lab-8-scenario-3-file-integrity-webshell-detection.md) | Wazuh syscheck monitoring for Apache web directory file creation and modification |
 
 ---
 
@@ -68,11 +69,14 @@ The goal of this repository is to demonstrate practical cybersecurity skills thr
 # Technologies & Platforms
 
 - Wazuh
+- Wazuh Dashboard
+- Wazuh File Integrity Monitoring
 - Sysmon
 - Windows Event Logs
 - Kali Linux
 - Kali Purple
 - Ubuntu Linux
+- Apache2
 - VMware Workstation Pro
 - Suricata
 - Zeek
@@ -90,6 +94,8 @@ The goal of this repository is to demonstrate practical cybersecurity skills thr
 - Endpoint monitoring
 - Windows and Linux log analysis
 - Threat hunting
+- File integrity monitoring
+- Web server monitoring
 - Network traffic analysis
 - Intrusion detection
 - Incident response workflows
@@ -111,8 +117,6 @@ Repository cleanup and restructuring notes can be found here:
 
 # Planned Future Labs
 
-- File integrity monitoring
-- Web shell detection
 - Vulnerability detection with Wazuh
 - Additional Linux investigation scenarios
 - Active Directory attack simulations
