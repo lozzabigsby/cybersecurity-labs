@@ -17,6 +17,7 @@ The portfolio includes:
 - Network detection and log analysis
 - Incident response case studies
 - Web application security testing
+- Vulnerability detection and CVE triage
 
 The goal of this repository is to demonstrate practical cybersecurity skills through structured investigations, technical documentation, evidence collection, and repeatable lab workflows.
 
@@ -31,6 +32,7 @@ The goal of this repository is to demonstrate practical cybersecurity skills thr
 | [Lab 6 - Scenario 1: Suspicious PowerShell Investigation](lab-6-scenario-1-powershell-investigation.md) | Endpoint telemetry investigation using Wazuh and Sysmon |
 | [Lab 7 - Scenario 2: SSH Brute Force Detection](lab-7-scenario-2-ssh-brute-force-detection.md) | Linux authentication monitoring and SSH brute-force alert investigation |
 | [Lab 8 - Scenario 3: File Integrity Monitoring and Web Shell Detection](lab-8-scenario-3-file-integrity-webshell-detection.md) | Wazuh syscheck monitoring for Apache web directory file creation and modification |
+| [Lab 9 - Wazuh Vulnerability Detection and CVE Investigation](lab-9-wazuh-vulnerability-detection-cve-investigation.md) | Vulnerability detection, CVE filtering, package review, and Wazuh CTI triage |
 
 ---
 
@@ -71,6 +73,8 @@ The goal of this repository is to demonstrate practical cybersecurity skills thr
 - Wazuh
 - Wazuh Dashboard
 - Wazuh File Integrity Monitoring
+- Wazuh Vulnerability Detection
+- Wazuh CTI
 - Sysmon
 - Windows Event Logs
 - Kali Linux
@@ -96,6 +100,9 @@ The goal of this repository is to demonstrate practical cybersecurity skills thr
 - Threat hunting
 - File integrity monitoring
 - Web server monitoring
+- Vulnerability detection
+- CVE triage
+- Package-level vulnerability analysis
 - Network traffic analysis
 - Intrusion detection
 - Incident response workflows
@@ -117,7 +124,6 @@ Repository cleanup and restructuring notes can be found here:
 
 # Planned Future Labs
 
-- Vulnerability detection with Wazuh
 - Additional Linux investigation scenarios
 - Active Directory attack simulations
 - Detection engineering rule tuning
@@ -127,4 +133,4 @@ Repository cleanup and restructuring notes can be found here:
 
 # Ongoing Development
 
-This portfolio will continue expanding as I build deeper practical capability across cybersecurity, detection engineering, SOC operations, endpoint monitoring, and incident response.
+This portfolio will continue expanding as I build deeper practical capability across cybersecurity, detection engineering, SOC operations, endpoint monitoring, vulnerability management, and incident response.
