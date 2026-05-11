@@ -19,6 +19,9 @@ Screenshot evidence is now stored inside lab-specific folders under `labs/`, so 
 | Lab 5 | Windows logging | [Windows Firewall Nmap Detection](lab-5-windows-firewall-nmap-detection.md) |
 | Lab 6 - Scenario 1 | SOC / endpoint monitoring | [Suspicious PowerShell Investigation](lab-6-scenario-1-powershell-investigation.md) |
 | Lab 7 - Scenario 2 | SOC / Linux authentication | [SSH Brute Force Detection](lab-7-scenario-2-ssh-brute-force-detection.md) |
+| Lab 8 - Scenario 3 | SOC / file integrity monitoring | [File Integrity Monitoring and Web Shell Detection](lab-8-scenario-3-file-integrity-webshell-detection.md) |
+| Lab 9 | Vulnerability management | [Wazuh Vulnerability Detection and CVE Investigation](lab-9-wazuh-vulnerability-detection-cve-investigation.md) |
+| Lab 10 | Network IDS / SIEM integration | [Wazuh Suricata Network Detection Integration](lab-10-wazuh-suricata-network-detection.md) |
 
 ## Current structure
 
@@ -34,12 +37,21 @@ cybersecurity-labs/
 ├── lab-5-windows-firewall-nmap-detection.md
 ├── lab-6-scenario-1-powershell-investigation.md
 ├── lab-7-scenario-2-ssh-brute-force-detection.md
+├── lab-8-scenario-3-file-integrity-webshell-detection.md
+├── lab-9-wazuh-vulnerability-detection-cve-investigation.md
+├── lab-10-wazuh-suricata-network-detection.md
 ├── labs/
 │   ├── lab-05-windows-firewall-nmap-detection/
 │   │   └── screenshots/
 │   ├── lab-06-wazuh-powershell-investigation/
 │   │   └── screenshots/
-│   └── lab-07-wazuh-ssh-bruteforce-detection/
+│   ├── lab-07-wazuh-ssh-bruteforce-detection/
+│   │   └── screenshots/
+│   ├── lab-08-wazuh-file-integrity-webshell-detection/
+│   │   └── screenshots/
+│   ├── lab-09-wazuh-vulnerability-detection-cve-investigation/
+│   │   └── screenshots/
+│   └── lab-10-wazuh-suricata-network-detection/
 │       └── screenshots/
 └── scripts/
     └── reorganise-images.ps1
