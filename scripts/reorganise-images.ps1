@@ -54,4 +54,13 @@ Move-LabImage "09-wazuh-disk-expanded-62gb.png" "labs/lab-07-wazuh-ssh-bruteforc
 Move-LabImage "10-wazuh-ssh-authentication-failure-alert.png" "labs/lab-07-wazuh-ssh-bruteforce-detection/screenshots/10-wazuh-ssh-authentication-failure-alert.png"
 Move-LabImage "11-wazuh-alert-details-source-ip.png" "labs/lab-07-wazuh-ssh-bruteforce-detection/screenshots/11-wazuh-alert-details-source-ip.png"
 
+# Lab 10 screenshots - Wazuh Suricata Network Detection Integration
+Move-LabImage "phase4-01-suricata-service-running.png" "labs/lab-10-wazuh-suricata-network-detection/screenshots/01-suricata-service-running.png"
+Move-LabImage "phase4-02-suricata-rules-loaded.png" "labs/lab-10-wazuh-suricata-network-detection/screenshots/02-suricata-rules-loaded.png"
+Move-LabImage "phase4-03-kali-nmap-scan.png" "labs/lab-10-wazuh-suricata-network-detection/screenshots/03-kali-nmap-scan.png"
+Move-LabImage "phase4-04-suricata-alert-log.png" "labs/lab-10-wazuh-suricata-network-detection/screenshots/04-suricata-alert-log.png"
+Move-LabImage "phase4-05-wazuh-agent-collecting-suricata.png" "labs/lab-10-wazuh-suricata-network-detection/screenshots/05-wazuh-agent-collecting-suricata.png"
+Move-LabImage "phase4-06-wazuh-suricata-alert-dashboard.png" "labs/lab-10-wazuh-suricata-network-detection/screenshots/06-wazuh-suricata-alert-dashboard.png"
+Move-LabImage "phase4-07-wazuh-suricata-event-details.png" "labs/lab-10-wazuh-suricata-network-detection/screenshots/07-wazuh-suricata-event-details.png"
+
 Write-Host "Image reorganisation complete. Now update markdown links, review with git status, then commit."
