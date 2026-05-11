@@ -21,7 +21,20 @@ Screenshot evidence is now stored inside lab-specific folders under `labs/`, so 
 | Lab 7 - Scenario 2 | SOC / Linux authentication | [SSH Brute Force Detection](lab-7-scenario-2-ssh-brute-force-detection.md) |
 | Lab 8 - Scenario 3 | SOC / file integrity monitoring | [File Integrity Monitoring and Web Shell Detection](lab-8-scenario-3-file-integrity-webshell-detection.md) |
 | Lab 9 | Vulnerability management | [Wazuh Vulnerability Detection and CVE Investigation](lab-9-wazuh-vulnerability-detection-cve-investigation.md) |
-| Lab 10 | Network IDS / SIEM integration | [Wazuh Suricata Network Detection Integration](lab-10-wazuh-suricata-network-detection.md) |
+| Lab 10 - Scenario 4 | Network IDS / SIEM integration | [Wazuh Suricata Network Detection Integration](lab-10-wazuh-suricata-network-detection.md) |
+
+## Scenario grouping
+
+The Wazuh SOC detection series is organised as:
+
+| Scenario | Lab | Focus |
+|---|---|---|
+| Scenario 1 | Lab 6 | Suspicious PowerShell investigation |
+| Scenario 2 | Lab 7 | SSH brute-force detection |
+| Scenario 3 | Lab 8 | File integrity monitoring and web shell detection |
+| Scenario 4 | Lab 10 | Suricata network detection integration |
+
+Lab 9 sits outside the numbered scenario series because it focuses on vulnerability management and CVE triage rather than attack-detection simulation.
 
 ## Current structure
 
