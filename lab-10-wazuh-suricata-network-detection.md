@@ -62,7 +62,7 @@ Suricata was checked on the Ubuntu victim to confirm that the IDS service was in
 
 Evidence:
 
-![Suricata service running](labs/lab-10-wazuh-suricata-network-detection/screenshots/01-suricata-service-running.png)
+![Suricata service running](labs/lab-10-wazuh-suricata-network-detection/screenshots/phase4-01-suricata-service-running.png)
 
 ### 2. Validated Suricata rules and configuration
 
@@ -70,7 +70,7 @@ The Suricata configuration was tested to confirm that the ruleset loaded correct
 
 Evidence:
 
-![Suricata rules loaded](labs/lab-10-wazuh-suricata-network-detection/screenshots/02-suricata-rules-loaded.png)
+![Suricata rules loaded](labs/lab-10-wazuh-suricata-network-detection/screenshots/phase4-02-suricata-rules-loaded.png)
 
 ### 3. Generated network traffic from Kali
 
@@ -78,7 +78,7 @@ Kali Linux was used to confirm connectivity to the Ubuntu victim and then genera
 
 Evidence:
 
-![Kali ping and Nmap scan](labs/lab-10-wazuh-suricata-network-detection/screenshots/03-kali-nmap-scan.png)
+![Kali ping and Nmap scan](labs/lab-10-wazuh-suricata-network-detection/screenshots/phase4-03-kali-nmap-scan.png)
 
 ### 4. Confirmed local Suricata alerting
 
@@ -92,7 +92,7 @@ This confirmed that Suricata detected the test traffic before Wazuh ingestion wa
 
 Evidence:
 
-![Suricata alert log](labs/lab-10-wazuh-suricata-network-detection/screenshots/04-suricata-alert-log.png)
+![Suricata alert log](labs/lab-10-wazuh-suricata-network-detection/screenshots/phase4-04-suricata-alert-log.png)
 
 ### 5. Configured Wazuh agent to collect Suricata logs
 
@@ -113,7 +113,7 @@ INFO: Analyzing file: '/var/log/suricata/eve.json'
 
 Evidence:
 
-![Wazuh agent collecting Suricata logs](labs/lab-10-wazuh-suricata-network-detection/screenshots/05-wazuh-agent-collecting-suricata.png)
+![Wazuh agent collecting Suricata logs](labs/lab-10-wazuh-suricata-network-detection/screenshots/phase4-05-wazuh-agent-collecting-suricata.png)
 
 ### 6. Confirmed Suricata alerts in Wazuh Dashboard
 
@@ -125,7 +125,7 @@ Suricata: Alert - ET SCAN Possible Nmap User-Agent Observed
 
 Evidence:
 
-![Wazuh Suricata alert dashboard](labs/lab-10-wazuh-suricata-network-detection/screenshots/06-wazuh-suricata-alert-dashboard.png)
+![Wazuh Suricata alert dashboard](labs/lab-10-wazuh-suricata-network-detection/screenshots/phase4-06-wazuh-suricata-alert-dashboard.png)
 
 ### 7. Reviewed Suricata event details in Wazuh
 
@@ -139,7 +139,7 @@ The event also showed the agent name `ubuntu-victim`, confirming that the alert 
 
 Evidence:
 
-![Wazuh Suricata event details](labs/lab-10-wazuh-suricata-network-detection/screenshots/07-wazuh-suricata-event-details.png)
+![Wazuh Suricata event details](labs/lab-10-wazuh-suricata-network-detection/screenshots/phase4-07-wazuh-nmap-event-details.png)
 
 ## Key Detection Evidence
 
