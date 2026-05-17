@@ -1,10 +1,10 @@
-# Lab 1: Web Application Security Testing Basics
+# Lab 1: OWASP Juice Shop Setup, Reconnaissance and Traffic Capture
 
 ## Analyst Summary
 
-This lab demonstrates a controlled web application security testing workflow using Kali Linux, Ubuntu Victim, OWASP Juice Shop, Nmap, Docker and Burp Suite.
+This lab demonstrates a controlled web application lab setup and reconnaissance workflow using Kali Linux, Ubuntu Victim, OWASP Juice Shop, Nmap, Docker and Burp Suite.
 
-The objective was to deploy an intentionally vulnerable web application, confirm network exposure, capture HTTP traffic through Burp Suite, inspect authentication requests and document the evidence in a clear analyst-style format.
+The objective was to deploy an intentionally vulnerable web application, confirm network exposure, capture HTTP traffic through Burp Suite, inspect baseline authentication traffic and document the evidence in a clear analyst-style format.
 
 This was completed in a private lab environment only.
 
@@ -12,12 +12,13 @@ This was completed in a private lab environment only.
 
 ## Objective
 
+- Build a safe local web application testing target
 - Deploy OWASP Juice Shop on an Ubuntu Victim VM using Docker
 - Confirm the vulnerable web application is reachable from Kali Linux
 - Use Nmap to validate the exposed service on TCP port 3000
 - Use Burp Suite to capture and inspect HTTP traffic
-- Review a login request and failed authentication response
-- Document findings, risk and remediation advice
+- Review a baseline login request and failed authentication response
+- Document setup, exposure, evidence and defensive observations
 
 ---
 
@@ -89,7 +90,7 @@ nmap -sV -p 3000 192.168.11.131 -oN lab01-nmap-service-scan.txt
 
 ### 1. Docker Installed
 
-![Docker installed](labs/lab-01-web-application-security-testing-basics/screenshots/lab01-00-docker-installed.png)
+![Docker installed](labs/lab-01-juice-shop-recon-traffic-capture/screenshots/lab01-00-docker-installed.png)
 
 Docker was installed and confirmed on the Ubuntu Victim VM.
 
@@ -97,7 +98,7 @@ Docker was installed and confirmed on the Ubuntu Victim VM.
 
 ### 2. Juice Shop Running
 
-![Juice Shop running](labs/lab-01-web-application-security-testing-basics/screenshots/lab01-01-juice-shop-running.png)
+![Juice Shop running](labs/lab-01-juice-shop-recon-traffic-capture/screenshots/lab01-01-juice-shop-running.png)
 
 OWASP Juice Shop successfully started and confirmed it was listening on port 3000.
 
@@ -105,7 +106,7 @@ OWASP Juice Shop successfully started and confirmed it was listening on port 300
 
 ### 3. Juice Shop Running in Detached Mode
 
-![Juice Shop running detached](labs/lab-01-web-application-security-testing-basics/screenshots/lab01-02-juice-shop-running-detached.png)
+![Juice Shop running detached](labs/lab-01-juice-shop-recon-traffic-capture/screenshots/lab01-02-juice-shop-running-detached.png)
 
 The Juice Shop container was later started in detached mode so the terminal could be reused.
 
@@ -113,7 +114,7 @@ The Juice Shop container was later started in detached mode so the terminal coul
 
 ### 4. Ubuntu Victim IP Address
 
-![Ubuntu Victim IP address](labs/lab-01-web-application-security-testing-basics/screenshots/lab01-03-ubuntu-victim-ip-address.png)
+![Ubuntu Victim IP address](labs/lab-01-juice-shop-recon-traffic-capture/screenshots/lab01-03-ubuntu-victim-ip-address.png)
 
 The Ubuntu Victim VM was assigned the IP address `192.168.11.131`.
 
@@ -121,7 +122,7 @@ The Ubuntu Victim VM was assigned the IP address `192.168.11.131`.
 
 ### 5. Juice Shop Loaded from Kali
 
-![Juice Shop homepage from Kali](labs/lab-01-web-application-security-testing-basics/screenshots/lab01-04-juice-shop-homepage-from-kali.png)
+![Juice Shop homepage from Kali](labs/lab-01-juice-shop-recon-traffic-capture/screenshots/lab01-04-juice-shop-homepage-from-kali.png)
 
 Kali Linux successfully accessed the Juice Shop web application over the lab network.
 
@@ -129,7 +130,7 @@ Kali Linux successfully accessed the Juice Shop web application over the lab net
 
 ### 6. Nmap Port 3000 Scan
 
-![Nmap port 3000 confirmed](labs/lab-01-web-application-security-testing-basics/screenshots/lab01-05-nmap-port-3000-confirmed.png)
+![Nmap port 3000 confirmed](labs/lab-01-juice-shop-recon-traffic-capture/screenshots/lab01-05-nmap-port-3000-confirmed.png)
 
 Nmap confirmed that TCP port `3000` was open on the Ubuntu Victim host.
 
@@ -137,19 +138,19 @@ Nmap confirmed that TCP port `3000` was open on the Ubuntu Victim host.
 
 ### 7. Nmap Service Detection
 
-![Nmap service version scan](labs/lab-01-web-application-security-testing-basics/screenshots/lab01-06-nmap-service-version-scan.png)
+![Nmap service version scan](labs/lab-01-juice-shop-recon-traffic-capture/screenshots/lab01-06-nmap-service-version-scan.png)
 
 Nmap service detection confirmed that the target was responding on port 3000. Nmap labelled the service as `ppp?`, but the returned HTTP content confirmed the application was OWASP Juice Shop.
 
 Raw scan output is saved here:
 
-[labs/lab-01-web-application-security-testing-basics/lab01-nmap-service-scan.txt](labs/lab-01-web-application-security-testing-basics/lab01-nmap-service-scan.txt)
+[labs/lab-01-juice-shop-recon-traffic-capture/lab01-nmap-service-scan.txt](labs/lab-01-juice-shop-recon-traffic-capture/lab01-nmap-service-scan.txt)
 
 ---
 
 ### 8. Burp HTTP History
 
-![Burp HTTP history](labs/lab-01-web-application-security-testing-basics/screenshots/lab01-07-burp-http-history-juice-shop.png)
+![Burp HTTP history](labs/lab-01-juice-shop-recon-traffic-capture/screenshots/lab01-07-burp-http-history-juice-shop.png)
 
 Burp Suite captured HTTP requests from Kali Firefox to the Juice Shop application.
 
@@ -157,7 +158,7 @@ Burp Suite captured HTTP requests from Kali Firefox to the Juice Shop applicatio
 
 ### 9. Homepage Request Details
 
-![Burp homepage request details](labs/lab-01-web-application-security-testing-basics/screenshots/lab01-08-burp-homepage-request-details.png)
+![Burp homepage request details](labs/lab-01-juice-shop-recon-traffic-capture/screenshots/lab01-08-burp-homepage-request-details.png)
 
 The captured request showed a standard `GET /` request to `192.168.11.131:3000`.
 
@@ -165,7 +166,7 @@ The captured request showed a standard `GET /` request to `192.168.11.131:3000`.
 
 ### 10. Login Request Analysis
 
-![Burp login request analysis](labs/lab-01-web-application-security-testing-basics/screenshots/lab01-09-burp-login-request-analysis.png)
+![Burp login request analysis](labs/lab-01-juice-shop-recon-traffic-capture/screenshots/lab01-09-burp-login-request-analysis.png)
 
 Burp captured a `POST /rest/user/login` request containing JSON login parameters. Fake test credentials were used for the lab.
 
@@ -173,13 +174,13 @@ Burp captured a `POST /rest/user/login` request containing JSON login parameters
 
 ### 11. Failed Login Response
 
-![Burp failed login response](labs/lab-01-web-application-security-testing-basics/screenshots/lab01-10-burp-login-failed-response.png)
+![Burp failed login response](labs/lab-01-juice-shop-recon-traffic-capture/screenshots/lab01-10-burp-login-failed-response.png)
 
 The failed login response confirmed that the application rejected the test credentials.
 
 ---
 
-## Key Findings
+## Key Observations
 
 | Finding | Evidence | Risk |
 |---|---|---|
@@ -195,7 +196,7 @@ The failed login response confirmed that the application rejected the test crede
 
 In a real organisation, an exposed web application should be carefully tested and monitored. Open application ports can reveal services to attackers, and login endpoints are common targets for credential attacks, injection testing and automated scanning.
 
-This lab did not exploit the application. It focused on safe reconnaissance, traffic capture and request analysis.
+This lab did not exploit the application. It focused on safe setup, reconnaissance, traffic capture and baseline request analysis. The exploitation stage is documented separately in Lab 4.
 
 ---
 
@@ -237,6 +238,6 @@ For a real production environment:
 
 ## Portfolio Reflection
 
-This lab improved my understanding of basic web application testing workflows. I practised deploying a vulnerable application, validating its network exposure, capturing browser traffic through Burp Suite and documenting the results in a structured way.
+This lab improved my understanding of setting up a vulnerable web application lab and validating it safely before exploitation. I practised deploying a vulnerable application, validating its network exposure, capturing browser traffic through Burp Suite and documenting the results in a structured way.
 
 The main value of this lab was learning how to move from basic tool usage to evidence-based reporting.

@@ -50,7 +50,7 @@ The goal of this repository is to demonstrate practical cybersecurity skills thr
 
 | Lab | Description |
 |---|---|
-| [Lab 1: Web Application Security Testing Basics](lab-1-web-application-security-testing-basics.md) | Safe web application reconnaissance, Docker-hosted OWASP Juice Shop validation, Nmap service checks, and Burp Suite HTTP request analysis |
+| [Lab 1: OWASP Juice Shop Setup, Reconnaissance and Traffic Capture](lab-1-juice-shop-recon-traffic-capture.md) | Building the Juice Shop lab target, confirming exposure with Nmap, and capturing baseline HTTP traffic in Burp Suite |
 | [Lab 4: SQL Injection Login Bypass](lab-4-sql-injection-login-bypass.md) | Authentication bypass using SQL injection against OWASP Juice Shop |
 
 ---

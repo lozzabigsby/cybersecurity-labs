@@ -12,10 +12,10 @@ Screenshot evidence is stored inside lab-specific folders under `labs/`, so the 
 
 | Lab | Area | Write-up |
 |---|---|---|
-| Lab 1 | Web application security | [Web Application Security Testing Basics](lab-1-web-application-security-testing-basics.md) |
+| Lab 1 | Lab setup / reconnaissance | [OWASP Juice Shop Setup, Reconnaissance and Traffic Capture](lab-1-juice-shop-recon-traffic-capture.md) |
 | Lab 2 | Network detection | [Suricata and Zeek Network Detection](lab-2-suricata-zeek.md) |
 | Lab 3 | Incident response | [Windows Incident Response](lab-3-windows-incident-response.md) |
-| Lab 4 | Web security | [SQL Injection Login Bypass](lab-4-sql-injection-login-bypass.md) |
+| Lab 4 | Web exploitation | [SQL Injection Login Bypass](lab-4-sql-injection-login-bypass.md) |
 | Lab 5 | Windows logging | [Windows Firewall Nmap Detection](lab-5-windows-firewall-nmap-detection.md) |
 | Lab 6 - Scenario 1 | SOC / endpoint monitoring | [Suspicious PowerShell Investigation](lab-6-scenario-1-powershell-investigation.md) |
 | Lab 7 - Scenario 2 | SOC / Linux authentication | [SSH Brute Force Detection](lab-7-scenario-2-ssh-brute-force-detection.md) |
@@ -43,7 +43,7 @@ cybersecurity-labs/
 ├── README.md
 ├── STRUCTURE.md
 ├── DIAGRAMS.md
-├── lab-1-web-application-security-testing-basics.md
+├── lab-1-juice-shop-recon-traffic-capture.md
 ├── lab-2-suricata-zeek.md
 ├── lab-3-windows-incident-response.md
 ├── lab-4-sql-injection-login-bypass.md
@@ -54,7 +54,7 @@ cybersecurity-labs/
 ├── lab-9-wazuh-vulnerability-detection-cve-investigation.md
 ├── lab-10-wazuh-suricata-network-detection.md
 ├── labs/
-│   ├── lab-01-web-application-security-testing-basics/
+│   ├── lab-01-juice-shop-recon-traffic-capture/
 │   │   ├── lab01-nmap-service-scan.txt
 │   │   └── screenshots/
 │   ├── lab-05-windows-firewall-nmap-detection/
