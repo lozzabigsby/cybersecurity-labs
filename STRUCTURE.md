@@ -6,13 +6,13 @@ This repository is organised as a cybersecurity portfolio rather than a loose fi
 
 The main lab write-ups currently live as Markdown files in the repository root for easy portfolio navigation.
 
-Screenshot evidence is now stored inside lab-specific folders under `labs/`, so the repository root stays clean while each investigation keeps its supporting evidence organised.
+Screenshot evidence is stored inside lab-specific folders under `labs/`, so the repository root stays clean while each investigation keeps its supporting evidence organised.
 
 ## Lab index
 
 | Lab | Area | Write-up |
 |---|---|---|
-| Lab 1 | Penetration testing | [Penetration Testing Basics](lab-1-pentest.md) |
+| Lab 1 | Web application security | [Web Application Security Testing Basics](lab-1-web-application-security-testing-basics.md) |
 | Lab 2 | Network detection | [Suricata and Zeek Network Detection](lab-2-suricata-zeek.md) |
 | Lab 3 | Incident response | [Windows Incident Response](lab-3-windows-incident-response.md) |
 | Lab 4 | Web security | [SQL Injection Login Bypass](lab-4-sql-injection-login-bypass.md) |
@@ -43,7 +43,7 @@ cybersecurity-labs/
 ├── README.md
 ├── STRUCTURE.md
 ├── DIAGRAMS.md
-├── lab-1-pentest.md
+├── lab-1-web-application-security-testing-basics.md
 ├── lab-2-suricata-zeek.md
 ├── lab-3-windows-incident-response.md
 ├── lab-4-sql-injection-login-bypass.md
@@ -54,6 +54,9 @@ cybersecurity-labs/
 ├── lab-9-wazuh-vulnerability-detection-cve-investigation.md
 ├── lab-10-wazuh-suricata-network-detection.md
 ├── labs/
+│   ├── lab-01-web-application-security-testing-basics/
+│   │   ├── lab01-nmap-service-scan.txt
+│   │   └── screenshots/
 │   ├── lab-05-windows-firewall-nmap-detection/
 │   │   └── screenshots/
 │   ├── lab-06-wazuh-powershell-investigation/
