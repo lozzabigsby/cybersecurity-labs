@@ -1,10 +1,16 @@
 # Financial Cybersecurity Risk Dashboard
 
+![Financial Cybersecurity Risk Dashboard](./screenshots/thumbnail.png)
+
 ## Project Overview
 
 This Power BI dashboard demonstrates how cybersecurity incident and vulnerability data can be turned into executive-level risk reporting for a financial services environment.
 
 The dashboard focuses on helping security and business stakeholders understand current cyber risk, incident workload, response trends, and areas that may need faster escalation or remediation.
+
+## Dashboard Walkthrough
+
+[Watch the dashboard demo video](./screenshots/Financial%20Cybersecurity%20Risk%20Dashboard.mp4)
 
 ## Dashboard File
 
@@ -70,14 +76,7 @@ The data used in this project is synthetic and created for portfolio and learnin
 
 ## Screenshots
 
-Screenshots should be added to the `screenshots` folder.
-
-Suggested screenshot names:
-
-- `overview.png`
-- `incident-status.png`
-- `risk-trends.png`
-- `executive-summary.png`
+![Financial Cybersecurity Risk Dashboard](./screenshots/thumbnail.png)
 
 ## Portfolio Purpose
 
