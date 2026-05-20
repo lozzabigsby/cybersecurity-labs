@@ -6,21 +6,63 @@
 ![SOC](https://img.shields.io/badge/SOC-Investigations-red)
 ![Blue Team](https://img.shields.io/badge/Blue-Team-darkblue)
 ![Incident Response](https://img.shields.io/badge/Incident-Response-orange)
+![Power BI](https://img.shields.io/badge/Power%20BI-Cyber%20Risk%20Reporting-yellow)
+![Suricata](https://img.shields.io/badge/Suricata-Network%20Detection-lightgrey)
+![Burp Suite](https://img.shields.io/badge/Burp%20Suite-Web%20Security-orange)
 
-This repository documents my hands-on cybersecurity labs across offensive and defensive security environments.
+This repository is a practical cybersecurity portfolio covering SOC investigations, detection engineering, incident response, web application testing, vulnerability management, and cybersecurity reporting.
 
-The portfolio includes:
+It is designed to show hands-on technical ability as well as the ability to communicate security findings clearly for business and operational decision-making.
 
-- Penetration testing labs
-- Windows and Linux investigations
-- Wazuh SOC monitoring scenarios
-- Network detection and log analysis
-- Incident response case studies
-- Web application security testing
-- Vulnerability detection and CVE triage
-- Cybersecurity reporting dashboards using Power BI
+---
 
-The goal of this repository is to demonstrate practical cybersecurity skills through structured investigations, technical documentation, evidence collection, repeatable lab workflows, and business-focused security reporting.
+# Portfolio Snapshot
+
+| Area | Evidence in this Repository |
+|---|---|
+| SOC investigation | Wazuh, Sysmon, Linux authentication logs, alert triage, endpoint monitoring |
+| Detection engineering | Suricata, Zeek, Nmap detection, Windows firewall log review, custom rule validation |
+| Vulnerability management | Wazuh vulnerability detection, CVE investigation, package-level triage, CVSS reporting |
+| Incident response | Windows investigation workflow, persistence review, containment thinking |
+| Offensive security | OWASP Juice Shop reconnaissance, Burp Suite traffic capture, SQL injection testing |
+| Cybersecurity reporting | Power BI dashboards for cyber risk, incidents, vulnerabilities, and executive summaries |
+
+---
+
+# Featured Projects
+
+These are the strongest projects to review first.
+
+| Project | Why It Matters |
+|---|---|
+| [Lab 10 - Wazuh Suricata Network Detection Integration](lab-10-wazuh-suricata-network-detection.md) | Shows SIEM and IDS integration, Nmap traffic detection, Suricata alert validation, and practical network monitoring workflow |
+| [Lab 9 - Wazuh Vulnerability Detection and CVE Investigation](lab-9-wazuh-vulnerability-detection-cve-investigation.md) | Shows vulnerability detection, CVE filtering, package review, and Wazuh CTI triage |
+| [Financial Cybersecurity Risk Dashboard](power-bi-dashboards/financial-cybersecurity-risk-dashboard/README.md) | Shows how cybersecurity data can be turned into executive-level Power BI risk reporting |
+| [Security Risk Overview Dashboard](power-bi-dashboards/security-risk-overview-dashboard/README.md) | Shows vulnerability management reporting using Power BI, including open findings, critical risk, CVSS scoring, and remediation visibility |
+
+---
+
+# What This Portfolio Demonstrates
+
+This portfolio demonstrates practical ability across three connected areas:
+
+1. **Technical cybersecurity investigation**
+   - identifying suspicious activity
+   - reviewing logs and alerts
+   - validating detection output
+   - documenting evidence clearly
+
+2. **Security monitoring and detection**
+   - working with SIEM-style tooling
+   - integrating endpoint and network telemetry
+   - testing alerts using controlled lab activity
+   - analysing authentication, firewall, web, and network events
+
+3. **Cybersecurity reporting and communication**
+   - building Power BI dashboards
+   - reporting cyber risk to non-technical stakeholders
+   - presenting incident, vulnerability, and risk metrics clearly
+   - connecting technical findings to business impact
 
 ---
 
@@ -81,56 +123,31 @@ These dashboards show how cybersecurity data can be converted into clear operati
 
 ---
 
-# Technologies & Platforms
+# Technical Tooling
 
-- Wazuh
-- Wazuh Dashboard
-- Wazuh File Integrity Monitoring
-- Wazuh Vulnerability Detection
-- Wazuh CTI
-- Sysmon
-- Windows Event Logs
-- Kali Linux
-- Kali Purple
-- Ubuntu Linux
-- Apache2
-- VMware Workstation Pro
-- Suricata
-- Zeek
-- Nmap
-- Hydra
-- Burp Suite
-- OWASP Juice Shop
-- Windows Defender Firewall
-- Power BI
-- DAX
-- Power Query
-- Cybersecurity risk reporting
+| Category | Tools and Platforms |
+|---|---|
+| SIEM and monitoring | Wazuh, Wazuh Dashboard, Wazuh File Integrity Monitoring, Wazuh Vulnerability Detection, Wazuh CTI |
+| Endpoint telemetry | Sysmon, Windows Event Logs, Windows Defender Firewall |
+| Network detection | Suricata, Zeek, Nmap |
+| Offensive testing | Kali Linux, Kali Purple, Hydra, Burp Suite, OWASP Juice Shop |
+| Systems and lab environment | Ubuntu Linux, Apache2, VMware Workstation Pro |
+| Reporting and analytics | Power BI, DAX, Power Query, cybersecurity KPI reporting |
 
 ---
 
 # Skills Demonstrated
 
-- Security event investigation
-- Endpoint monitoring
-- Windows and Linux log analysis
-- Threat hunting
-- File integrity monitoring
-- Web server monitoring
-- Vulnerability detection
-- CVE triage
-- Package-level vulnerability analysis
-- Network traffic analysis
-- Intrusion detection
-- Incident response workflows
-- Web application testing
-- Firewall log analysis
-- SOC investigation methodology
-- Security documentation and evidence collection
-- Power BI dashboard development
-- Cybersecurity KPI reporting
-- Vulnerability management reporting
-- Executive cyber risk communication
+| Skill Area | Evidence |
+|---|---|
+| Security event investigation | Wazuh and Sysmon alert review, suspicious PowerShell investigation, authentication monitoring |
+| Threat hunting | Endpoint, Linux, firewall, and web server activity review |
+| Vulnerability management | Wazuh vulnerability detection, CVE filtering, CTI review, package-level analysis |
+| Network traffic analysis | Suricata and Zeek monitoring, Nmap activity validation, IDS alert review |
+| Incident response | Windows investigation workflow, persistence analysis, containment reasoning |
+| Web application testing | OWASP Juice Shop reconnaissance, Burp Suite capture, SQL injection login bypass |
+| Documentation | Structured lab reports, screenshots, investigation notes, repeatable workflows |
+| Cyber risk reporting | Power BI dashboards, KPI design, vulnerability reporting, executive-level security communication |
 
 ---
 
@@ -150,6 +167,7 @@ Repository cleanup and restructuring notes can be found here:
 - Detection engineering rule tuning
 - Threat hunting investigations
 - Additional Power BI cybersecurity reporting pages and screenshots
+- More incident write-ups using clear evidence, finding, impact, and recommendation sections
 
 ---
 
