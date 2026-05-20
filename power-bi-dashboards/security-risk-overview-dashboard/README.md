@@ -1,8 +1,14 @@
 # Security Risk Overview Dashboard
 
+![Security Risk Overview Dashboard](./screenshots/Security%20Risk%20Overview.png)
+
 ## Project Overview
 
 This Power BI dashboard provides a focused view of cybersecurity vulnerability risk. It is designed to show how vulnerability data can be analysed and presented for security teams, technical stakeholders, and management.
+
+## Dashboard Walkthrough
+
+[Watch the dashboard demo video](./screenshots/Security%20Overview%20Demo.mp4)
 
 ## Dashboard File
 
@@ -61,14 +67,7 @@ The data used in this project is synthetic and created for portfolio and learnin
 
 ## Screenshots
 
-Screenshots should be added to the `screenshots` folder.
-
-Suggested screenshot names:
-
-- `overview.png`
-- `vulnerability-status.png`
-- `cvss-trends.png`
-- `risk-distribution.png`
+![Security Risk Overview Dashboard](./screenshots/Security%20Risk%20Overview.png)
 
 ## Portfolio Purpose
 
