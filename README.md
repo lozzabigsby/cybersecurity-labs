@@ -18,8 +18,9 @@ The portfolio includes:
 - Incident response case studies
 - Web application security testing
 - Vulnerability detection and CVE triage
+- Cybersecurity reporting dashboards using Power BI
 
-The goal of this repository is to demonstrate practical cybersecurity skills through structured investigations, technical documentation, evidence collection, and repeatable lab workflows.
+The goal of this repository is to demonstrate practical cybersecurity skills through structured investigations, technical documentation, evidence collection, repeatable lab workflows, and business-focused security reporting.
 
 ---
 
@@ -69,6 +70,17 @@ The goal of this repository is to demonstrate practical cybersecurity skills thr
 
 ---
 
+# Power BI Cybersecurity Dashboards
+
+These dashboards show how cybersecurity data can be converted into clear operational and executive reporting.
+
+| Dashboard | Focus Area |
+|---|---|
+| [Financial Cybersecurity Risk Dashboard](power-bi-dashboards/financial-cybersecurity-risk-dashboard/README.md) | Executive cyber risk reporting for financial services, including active incidents, incident status, response trends, average risk score, and risk summary insights |
+| [Security Risk Overview Dashboard](power-bi-dashboards/security-risk-overview-dashboard/README.md) | Vulnerability management reporting, including total vulnerabilities, open vulnerabilities, critical findings, CVSS scoring, remediation status, and risk trends |
+
+---
+
 # Technologies & Platforms
 
 - Wazuh
@@ -90,6 +102,10 @@ The goal of this repository is to demonstrate practical cybersecurity skills thr
 - Burp Suite
 - OWASP Juice Shop
 - Windows Defender Firewall
+- Power BI
+- DAX
+- Power Query
+- Cybersecurity risk reporting
 
 ---
 
@@ -111,6 +127,10 @@ The goal of this repository is to demonstrate practical cybersecurity skills thr
 - Firewall log analysis
 - SOC investigation methodology
 - Security documentation and evidence collection
+- Power BI dashboard development
+- Cybersecurity KPI reporting
+- Vulnerability management reporting
+- Executive cyber risk communication
 
 ---
 
@@ -129,9 +149,10 @@ Repository cleanup and restructuring notes can be found here:
 - Active Directory attack simulations
 - Detection engineering rule tuning
 - Threat hunting investigations
+- Additional Power BI cybersecurity reporting pages and screenshots
 
 ---
 
 # Ongoing Development
 
-This portfolio will continue expanding as I build deeper practical capability across cybersecurity, detection engineering, SOC operations, endpoint monitoring, vulnerability management, and incident response.
+This portfolio will continue expanding as I build deeper practical capability across cybersecurity, detection engineering, SOC operations, endpoint monitoring, vulnerability management, incident response, and security reporting.
