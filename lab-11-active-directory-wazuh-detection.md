@@ -21,6 +21,71 @@ Custom Wazuh detection rules
 
 ---
 
+## Executive Summary
+
+This project built a five-system security lab around the `reflect.test` Active Directory domain and proved that identity, endpoint, and file-share activity could be centrally detected and investigated.
+
+Three Windows systems were joined to the domain and monitored by Wazuh. Native Windows Security auditing and Sysmon telemetry were collected by an Ubuntu-based Wazuh server. Controlled activity from Windows and Kali then validated detections for failed authentication, unauthorised Finance-share access, encoded PowerShell, scheduled-task persistence, privileged-group modification, and SMB object access.
+
+### Portfolio Highlights
+
+| Measure | Result |
+|---|---|
+| Systems in the isolated lab | 5 |
+| Domain-joined Windows systems | 3 |
+| Active Wazuh Windows agents | 3 |
+| Endpoint telemetry sources | Windows Security and Sysmon |
+| Custom Wazuh detections validated | 2 |
+| Additional built-in detections investigated | 3 |
+| Evidence screenshots | 45 |
+| MITRE ATT&CK techniques evidenced | 4 |
+
+The project demonstrates the ability to build the environment, configure the controls, generate controlled security activity, validate alerts, interpret event fields, and communicate the results as a repeatable SOC investigation.
+
+---
+
+## Architecture
+
+```mermaid
+flowchart LR
+    Kali["Kali Linux<br/>Controlled testing"]
+    Net["VMnet2 isolated network<br/>10.20.30.0/24"]
+    DC["DC01<br/>AD DS, DNS, SMB and audit logs<br/>10.20.30.10"]
+    WS["WS01<br/>Domain workstation<br/>10.20.30.101"]
+    ADM["ADM01<br/>Administrative workstation<br/>10.20.30.102"]
+    Wazuh["Ubuntu Wazuh Server<br/>Manager, indexer and dashboard<br/>10.20.30.20"]
+
+    Kali --> Net
+    DC --> Net
+    WS --> Net
+    ADM --> Net
+    Wazuh --> Net
+    DC -->|"AD DS, DNS and Group Policy"| WS
+    DC -->|"AD DS, DNS and Group Policy"| ADM
+    WS -->|"Security and Sysmon events"| Wazuh
+    ADM -->|"Security and Sysmon events"| Wazuh
+    DC -->|"Security and Sysmon events"| Wazuh
+    Kali -->|"SMB and authentication tests"| DC
+```
+
+### Detection Data Flow
+
+```text
+Controlled activity
+        ↓
+Windows Security or Sysmon event
+        ↓
+Wazuh agent on DC01, WS01, or ADM01
+        ↓
+Ubuntu Wazuh manager and indexer
+        ↓
+Built-in or custom Wazuh rule
+        ↓
+Dashboard alert and analyst validation
+```
+
+---
+
 ## Lab Objective
 
 The objective was to create a monitored Active Directory lab that could support both defensive administration and controlled security testing.
@@ -347,6 +412,69 @@ The Wazuh event view showed detailed network-share access telemetry for Event ID
 
 ---
 
+## Detection Engineering Detail
+
+The alert review went beyond confirming that an event appeared in the dashboard. The source agent, event channel, Windows or Sysmon Event ID, user, process, command line, target object, source address, Wazuh rule, severity, and MITRE mapping were checked where available.
+
+### Validated Rule Coverage
+
+| Scenario | Telemetry and match context | Wazuh rule | Level | Outcome |
+|---|---|---:|---:|---|
+| Unauthorised Finance-share access | Windows Security Event ID `5145`; user `james.hall`; Finance share; `Q3_Budget_Draft.txt`; source `10.20.30.200` | `100101` | 10 | Custom alert fired on DC01 |
+| Encoded PowerShell | Sysmon Event ID `1`; `powershell.exe`; encoded command line; WS01 | `92057` | 12 | Built-in high-severity alert fired |
+| Scheduled-task persistence | Sysmon Event ID `1`; `schtasks.exe /Create`; task `LAB11-Persistence-Test`; WS01 | `100102` | 10 | Custom persistence alert fired |
+| Privileged-group membership change | Windows Security Event ID `4728`; James Hall added to `GG-Workstation-Admins`; DC01 | `60141` | 5 | Membership change recorded in Wazuh |
+| Network-share object access | Windows Security Event ID `5145`; share path, account, access list, and source address | Windows event-channel rule | Varies | Share access searchable and attributable |
+
+### Custom Detection Specifications
+
+#### Rule 100101 - Unauthorised Finance-share access
+
+| Field | Validated value |
+|---|---|
+| Data source | Windows Security log |
+| Windows Event ID | `5145` |
+| Agent | `DC01` / agent ID `003` |
+| User | `REFLECT\james.hall` |
+| Target share | `Finance$` |
+| Target object | `Q3_Budget_Draft.txt` |
+| Source address | `10.20.30.200` |
+| Wazuh level | 10 |
+| MITRE ATT&CK | `T1039` - Data from Network Shared Drive |
+
+This rule turns a high-volume share-access event into a specific alert by adding business context: a Sales user accessed a Finance resource.
+
+#### Rule 100102 - Scheduled-task persistence
+
+| Field | Validated value |
+|---|---|
+| Data source | Sysmon Operational log |
+| Sysmon Event ID | `1` - Process Create |
+| Agent | `WS01` / agent ID `004` |
+| Process | `schtasks.exe` |
+| Command-line indicator | `/Create` |
+| Test task | `LAB11-Persistence-Test` |
+| Execution context | `SYSTEM` at logon |
+| Wazuh level | 10 |
+| MITRE ATT&CK | `T1053.005` - Scheduled Task/Job: Scheduled Task |
+
+This rule identifies command-line creation of a scheduled task and preserves the full process context required for triage.
+
+---
+
+## MITRE ATT&CK Mapping
+
+| Behaviour | Technique | Tactic | Evidence |
+|---|---|---|---|
+| Encoded PowerShell execution | `T1059.001` - PowerShell | Execution | Sysmon process creation and Wazuh rule `92057` |
+| Scheduled-task creation | `T1053.005` - Scheduled Task | Execution, Persistence, Privilege Escalation | Custom Wazuh rule `100102` |
+| Finance-share document access | `T1039` - Data from Network Shared Drive | Collection | Custom Wazuh rule `100101` |
+| Privileged-group membership change | `T1098` - Account Manipulation | Persistence, Privilege Escalation | Windows Event ID `4728` and Wazuh rule `60141`; analyst mapping |
+
+The first three mappings were present in the Wazuh alert evidence. The `T1098` mapping is an analyst-applied interpretation of the privileged-group change rather than a mapping displayed in the captured alert.
+
+---
+
 ## Key Detection Evidence
 
 | Detection or Control | Result |
@@ -407,6 +535,73 @@ Native Event IDs provided the underlying evidence, while custom Wazuh rules elev
 8. Tune custom Wazuh rules to reduce false positives while preserving high-value context.
 9. Protect the Wazuh manager and dashboard using restricted administration and secure network access.
 10. Document and test an incident-response workflow for each high-priority detection.
+
+---
+
+## Remediation and Validation Plan
+
+The Finance permission was intentionally left in place during the detection phase so the access scenario could be repeated. A production-style closure would use the following validation sequence:
+
+1. Remove the direct `REFLECT\james.hall` access-control entry from the Finance share and underlying NTFS folder.
+2. Confirm that Finance access is granted only through the approved Finance security group.
+3. Refresh the user's sign-in token or start a new session.
+4. Retest read and write access from the same source endpoint.
+5. Confirm that access is denied and that Windows generates the expected failure audit event.
+6. Confirm that Wazuh ingests the event and retains the user, source address, share, object, and access-mask context.
+7. Record the before-and-after permission state as closure evidence.
+
+This separates two outcomes that should not be confused: the detection control worked, but the underlying access weakness still requires remediation and verification.
+
+---
+
+## Investigation Playbooks
+
+### Encoded PowerShell alert
+
+1. Confirm the source agent, user, integrity level, parent process, and complete command line.
+2. Decode the Base64 content in an isolated analysis environment.
+3. Review adjacent Sysmon process, network, and file events.
+4. Check whether the same command or hash appears on other endpoints.
+5. Contain the endpoint if the activity is not an authorised test.
+
+### Scheduled-task persistence alert
+
+1. Record the task name, command, trigger, run-as account, and creating process.
+2. Compare the task with the approved administrative baseline.
+3. Review the parent PowerShell process and the initiating user session.
+4. Disable and preserve the task if unauthorised.
+5. Hunt for the same task name or command across the environment.
+
+### Privileged-group change alert
+
+1. Confirm the actor, added member, target group, domain controller, and timestamp.
+2. Validate the change against an approved request.
+3. Remove unauthorised membership and reset affected credentials if necessary.
+4. Review subsequent privileged logons and administrative activity.
+5. Search for related account-management events across all domain controllers.
+
+---
+
+## Scope and Limitations
+
+- The environment is an isolated home lab using synthetic identities and test data.
+- Attack activity was controlled and generated only to validate defensive visibility.
+- The custom rules were validated against the captured scenarios; production deployment would require broader testing and false-positive tuning.
+- The screenshots prove detection of the intentional Finance access, but post-remediation denial evidence was not captured in this phase.
+- High availability, long-term retention, backup, and production-scale Wazuh performance were outside the scope of this exercise.
+
+Documenting these limitations makes the evidence easier to assess and avoids overstating what the lab proves.
+
+---
+
+## Key Lessons Learned
+
+- Correct network, DNS, time, and domain configuration are prerequisites for reliable security monitoring.
+- Group-based permissions are easier to audit and maintain than direct user assignments.
+- Share permissions and NTFS permissions must be assessed together because effective access depends on both.
+- Native Windows logs provide identity and object context, while Sysmon adds the process detail needed for behavioural detection.
+- Central collection is not enough by itself; useful detections require validated fields, meaningful severity, and business context.
+- A successful alert proves visibility, not remediation. The underlying weakness must still be removed and retested.
 
 ---
 
