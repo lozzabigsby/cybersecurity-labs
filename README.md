@@ -35,6 +35,7 @@ These are the strongest projects to review first.
 
 | Project | Why It Matters |
 |---|---|
+| [Lab 11 - Active Directory Security Monitoring and Wazuh Detection Engineering](lab-11-active-directory-wazuh-detection.md) | Shows end-to-end Active Directory deployment, Windows auditing, Sysmon and Wazuh integration, attack simulation, and custom detection validation |
 | [Lab 10 - Wazuh Suricata Network Detection Integration](lab-10-wazuh-suricata-network-detection.md) | Shows SIEM and IDS integration, Nmap traffic detection, Suricata alert validation, and practical network monitoring workflow |
 | [Lab 9 - Wazuh Vulnerability Detection and CVE Investigation](lab-9-wazuh-vulnerability-detection-cve-investigation.md) | Shows vulnerability detection, CVE filtering, package review, and Wazuh CTI triage |
 | [Financial Cybersecurity Risk Dashboard](power-bi-dashboards/financial-cybersecurity-risk-dashboard/README.md) | Shows how cybersecurity data can be turned into executive-level Power BI risk reporting |
@@ -77,6 +78,7 @@ This portfolio demonstrates practical ability across three connected areas:
 | [Lab 8 - Scenario 3: File Integrity Monitoring and Web Shell Detection](lab-8-scenario-3-file-integrity-webshell-detection.md) | Wazuh syscheck monitoring for Apache web directory file creation and modification |
 | [Lab 9 - Wazuh Vulnerability Detection and CVE Investigation](lab-9-wazuh-vulnerability-detection-cve-investigation.md) | Vulnerability detection, CVE filtering, package review, and Wazuh CTI triage |
 | [Lab 10 - Wazuh Suricata Network Detection Integration](lab-10-wazuh-suricata-network-detection.md) | Suricata IDS integration with Wazuh, Nmap traffic detection, and SIEM alert validation |
+| [Lab 11 - Active Directory Security Monitoring and Wazuh Detection Engineering](lab-11-active-directory-wazuh-detection.md) | Active Directory administration, Windows auditing, Sysmon telemetry, custom Wazuh rules, and multi-endpoint detection validation |
 
 ---
 
@@ -86,6 +88,7 @@ This portfolio demonstrates practical ability across three connected areas:
 |---|---|
 | [Lab 2: Suricata and Zeek Network Detection](lab-2-suricata-zeek.md) | IDS alerting, network metadata analysis, and custom Suricata rule creation |
 | [Lab 5: Windows Firewall Nmap Detection](lab-5-windows-firewall-nmap-detection.md) | Detecting reconnaissance activity using native Windows firewall logs |
+| [Lab 11: Active Directory Security Monitoring and Wazuh Detection Engineering](lab-11-active-directory-wazuh-detection.md) | Building a monitored Windows domain and validating authentication, file-share, PowerShell, persistence, and privileged-group detections |
 
 ---
 
@@ -131,7 +134,7 @@ These dashboards show how cybersecurity data can be converted into clear operati
 | Endpoint telemetry | Sysmon, Windows Event Logs, Windows Defender Firewall |
 | Network detection | Suricata, Zeek, Nmap |
 | Offensive testing | Kali Linux, Kali Purple, Hydra, Burp Suite, OWASP Juice Shop |
-| Systems and lab environment | Ubuntu Linux, Apache2, VMware Workstation Pro |
+| Systems and lab environment | Windows Server, Active Directory, Group Policy, Ubuntu Linux, Apache2, VMware Workstation Pro |
 | Reporting and analytics | Power BI, DAX, Power Query, cybersecurity KPI reporting |
 
 ---
@@ -141,6 +144,7 @@ These dashboards show how cybersecurity data can be converted into clear operati
 | Skill Area | Evidence |
 |---|---|
 | Security event investigation | Wazuh and Sysmon alert review, suspicious PowerShell investigation, authentication monitoring |
+| Active Directory security | Domain deployment, organisational units, RBAC, Group Policy, Windows auditing, privileged-group monitoring |
 | Threat hunting | Endpoint, Linux, firewall, and web server activity review |
 | Vulnerability management | Wazuh vulnerability detection, CVE filtering, CTI review, package-level analysis |
 | Network traffic analysis | Suricata and Zeek monitoring, Nmap activity validation, IDS alert review |
