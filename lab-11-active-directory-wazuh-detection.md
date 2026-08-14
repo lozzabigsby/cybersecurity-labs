@@ -44,7 +44,7 @@ The lab was designed to demonstrate the full security-monitoring chain:
 | DC01 | Windows Server domain controller, DNS, file shares, and audit source | `10.20.30.10` |
 | WS01 | Domain-joined Windows workstation and detection target | `10.20.30.101` |
 | ADM01 | Domain-joined administrative workstation | `10.20.30.102` |
-| Wazuh Server | SIEM manager, indexer, and dashboard | `10.20.30.20` |
+| Wazuh Server | Ubuntu Linux host running the Wazuh manager, indexer, and dashboard | `10.20.30.20` |
 | Kali Linux | Controlled attack and validation system | VMnet2 lab network |
 | VMware Workstation | Virtualisation and isolated network platform | VMnet2 / `10.20.30.0/24` |
 
@@ -69,6 +69,7 @@ The lab was designed to demonstrate the full security-monitoring chain:
 - Windows Advanced Audit Policy
 - Windows Security Event Log
 - Sysmon
+- Ubuntu Linux
 - Wazuh Manager 4.14.5
 - Wazuh agents
 - Wazuh Dashboard
@@ -216,21 +217,21 @@ Windows Security events showed activity against `Q3_Budget_Draft.txt`, including
 
 ## Phase 4 - Wazuh and Sysmon Integration
 
-### 20. Connected the Wazuh server to the isolated lab network
+### 20. Connected the Ubuntu Wazuh server to the isolated lab network
 
-The Wazuh server was configured on VMnet2 and successfully reached DC01 at `10.20.30.10`.
+The Ubuntu Linux Wazuh server was configured with a second network interface on VMnet2 and successfully reached DC01 at `10.20.30.10`.
 
 ![Wazuh VMnet2 connectivity](labs/lab-11-active-directory-wazuh-detection/screenshots/28-wazuh-vmnet2-connectivity.png)
 
 ### 21. Confirmed the Wazuh network configuration persisted
 
-After rebooting, the Wazuh server retained its `10.20.30.20/24` address and could still reach DC01.
+After rebooting, Ubuntu retained the Wazuh server's `10.20.30.20/24` address and could still reach DC01. This confirmed that the Linux network configuration persisted correctly.
 
 ![Wazuh static VMnet2 address after reboot](labs/lab-11-active-directory-wazuh-detection/screenshots/29-wazuh-static-vmnet2-after-reboot.png)
 
 ### 22. Verified Wazuh services, ports, and version
 
-The Wazuh manager, indexer, dashboard, and supporting ports were checked. The manager reported version `4.14.5`.
+The Wazuh manager, indexer, dashboard, and supporting ports were checked from the Ubuntu terminal. The manager reported version `4.14.5`.
 
 ![Wazuh services and ports running](labs/lab-11-active-directory-wazuh-detection/screenshots/30-wazuh-services-and-ports-running.png)
 
@@ -432,6 +433,7 @@ This is an important SOC workflow: do not stop at proving that a log exists. Con
 - Windows Advanced Audit Policy
 - PowerShell and process command-line logging
 - Windows Security event analysis
+- Ubuntu Linux networking and service validation
 - Wazuh manager and Windows agent deployment
 - Sysmon installation and SIEM integration
 - Multi-endpoint security monitoring
@@ -449,7 +451,7 @@ This is an important SOC workflow: do not stop at proving that a log exists. Con
 
 This lab successfully built and monitored a complete Active Directory security environment.
 
-DC01, WS01, and ADM01 were configured on an isolated network and joined to the `reflect.test` domain. Organisational units, users, groups, privileged accounts, service accounts, SMB shares, and Group Policy controls were implemented and validated. Advanced Windows auditing and Sysmon provided detailed endpoint telemetry, while Wazuh centralised events from all three Windows systems.
+DC01, WS01, and ADM01 were configured on an isolated network and joined to the `reflect.test` domain. Organisational units, users, groups, privileged accounts, service accounts, SMB shares, and Group Policy controls were implemented and validated. Advanced Windows auditing and Sysmon provided detailed endpoint telemetry, while the Ubuntu-based Wazuh server centralised events from all three Windows systems.
 
 Controlled testing confirmed detection of failed authentication, SMB activity, Finance-share access, encoded PowerShell, scheduled-task persistence, privileged-group changes, and Event ID `5145` network-share access.
 
