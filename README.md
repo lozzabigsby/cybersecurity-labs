@@ -35,7 +35,7 @@ These are the strongest projects to review first.
 
 | Project | Why It Matters |
 |---|---|
-| [Lab 11 - Active Directory Security Monitoring and Wazuh Detection Engineering](lab-11-active-directory-wazuh-detection.md) | Shows end-to-end Active Directory deployment, Windows auditing, Sysmon and Wazuh integration, attack simulation, and custom detection validation |
+| [Lab 12 - Operation Blackout: Segmented Active Directory Detection Lab](lab-12-operation-blackout.md) | Shows enterprise-style network segmentation, pfSense policy, Active Directory controls, Wazuh/Sysmon monitoring, controlled attack simulation, and evidence-led detection validation |\n| [Lab 11 - Active Directory Security Monitoring and Wazuh Detection Engineering](lab-11-active-directory-wazuh-detection.md) | Shows end-to-end Active Directory deployment, Windows auditing, Sysmon and Wazuh integration, attack simulation, and custom detection validation |
 | [Lab 10 - Wazuh Suricata Network Detection Integration](lab-10-wazuh-suricata-network-detection.md) | Shows SIEM and IDS integration, Nmap traffic detection, Suricata alert validation, and practical network monitoring workflow |
 | [Lab 9 - Wazuh Vulnerability Detection and CVE Investigation](lab-9-wazuh-vulnerability-detection-cve-investigation.md) | Shows vulnerability detection, CVE filtering, package review, and Wazuh CTI triage |
 | [Financial Cybersecurity Risk Dashboard](power-bi-dashboards/financial-cybersecurity-risk-dashboard/README.md) | Shows how cybersecurity data can be turned into executive-level Power BI risk reporting |
@@ -78,7 +78,7 @@ This portfolio demonstrates practical ability across three connected areas:
 | [Lab 8 - Scenario 3: File Integrity Monitoring and Web Shell Detection](lab-8-scenario-3-file-integrity-webshell-detection.md) | Wazuh syscheck monitoring for Apache web directory file creation and modification |
 | [Lab 9 - Wazuh Vulnerability Detection and CVE Investigation](lab-9-wazuh-vulnerability-detection-cve-investigation.md) | Vulnerability detection, CVE filtering, package review, and Wazuh CTI triage |
 | [Lab 10 - Wazuh Suricata Network Detection Integration](lab-10-wazuh-suricata-network-detection.md) | Suricata IDS integration with Wazuh, Nmap traffic detection, and SIEM alert validation |
-| [Lab 11 - Active Directory Security Monitoring and Wazuh Detection Engineering](lab-11-active-directory-wazuh-detection.md) | Active Directory administration, Windows auditing, Sysmon telemetry, custom Wazuh rules, and multi-endpoint detection validation |
+| [Lab 11 - Active Directory Security Monitoring and Wazuh Detection Engineering](lab-11-active-directory-wazuh-detection.md) | Active Directory administration, Windows auditing, Sysmon telemetry, custom Wazuh rules, and multi-endpoint detection validation |\n| [Lab 12 - Operation Blackout: Segmented Active Directory Detection Lab](lab-12-operation-blackout.md) | pfSense segmentation, Active Directory controls, Wazuh/Sysmon telemetry, SMB authentication detection, encoded PowerShell detection, and secure test cleanup |
 
 ---
 
@@ -88,7 +88,7 @@ This portfolio demonstrates practical ability across three connected areas:
 |---|---|
 | [Lab 2: Suricata and Zeek Network Detection](lab-2-suricata-zeek.md) | IDS alerting, network metadata analysis, and custom Suricata rule creation |
 | [Lab 5: Windows Firewall Nmap Detection](lab-5-windows-firewall-nmap-detection.md) | Detecting reconnaissance activity using native Windows firewall logs |
-| [Lab 11: Active Directory Security Monitoring and Wazuh Detection Engineering](lab-11-active-directory-wazuh-detection.md) | Building a monitored Windows domain and validating authentication, file-share, PowerShell, persistence, and privileged-group detections |
+| [Lab 11: Active Directory Security Monitoring and Wazuh Detection Engineering](lab-11-active-directory-wazuh-detection.md) | Building a monitored Windows domain and validating authentication, file-share, PowerShell, persistence, and privileged-group detections |\n| [Lab 12: Operation Blackout - Segmented Active Directory Detection Lab](lab-12-operation-blackout.md) | pfSense security zones, default-deny attack-network policy, multi-endpoint Wazuh visibility, and controlled SMB and PowerShell detection testing |
 
 ---
 
@@ -134,7 +134,7 @@ These dashboards show how cybersecurity data can be converted into clear operati
 | Endpoint telemetry | Sysmon, Windows Event Logs, Windows Defender Firewall |
 | Network detection | Suricata, Zeek, Nmap |
 | Offensive testing | Kali Linux, Kali Purple, Hydra, Burp Suite, OWASP Juice Shop |
-| Systems and lab environment | Windows Server, Active Directory, Group Policy, Ubuntu Linux, Apache2, VMware Workstation Pro |
+| Systems and lab environment | Windows Server, Active Directory, Group Policy, pfSense, Ubuntu Linux, Apache2, VMware Workstation Pro |
 | Reporting and analytics | Power BI, DAX, Power Query, cybersecurity KPI reporting |
 
 ---
