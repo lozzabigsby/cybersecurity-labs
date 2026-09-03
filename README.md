@@ -8,6 +8,7 @@
 ![Incident Response](https://img.shields.io/badge/Incident-Response-orange)
 ![Power BI](https://img.shields.io/badge/Power%20BI-Cyber%20Risk%20Reporting-yellow)
 ![Suricata](https://img.shields.io/badge/Suricata-Network%20Detection-lightgrey)
+![pfSense](https://img.shields.io/badge/pfSense-Network%20Segmentation-212121)
 ![Burp Suite](https://img.shields.io/badge/Burp%20Suite-Web%20Security-orange)
 
 This repository is a practical cybersecurity portfolio covering SOC investigations, detection engineering, incident response, web application testing, vulnerability management, and cybersecurity reporting.
