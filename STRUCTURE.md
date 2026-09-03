@@ -22,7 +22,8 @@ Screenshot evidence is stored inside lab-specific folders under `labs/`, so the 
 | Lab 8 - Scenario 3 | SOC / file integrity monitoring | [File Integrity Monitoring and Web Shell Detection](lab-8-scenario-3-file-integrity-webshell-detection.md) |
 | Lab 9 | Vulnerability management | [Wazuh Vulnerability Detection and CVE Investigation](lab-9-wazuh-vulnerability-detection-cve-investigation.md) |
 | Lab 10 - Scenario 4 | Network IDS / SIEM integration | [Wazuh Suricata Network Detection Integration](lab-10-wazuh-suricata-network-detection.md) |
-| Lab 11 | Active Directory / detection engineering | [Active Directory Security Monitoring and Wazuh Detection Engineering](lab-11-active-directory-wazuh-detection.md) |\n| Lab 12 | Network segmentation / Active Directory detection | [Operation Blackout: Segmented Active Directory Detection Lab](lab-12-operation-blackout.md) |
+| Lab 11 | Active Directory / detection engineering | [Active Directory Security Monitoring and Wazuh Detection Engineering](lab-11-active-directory-wazuh-detection.md) |
+| Lab 12 | Network segmentation / Active Directory detection | [Operation Blackout: Segmented Active Directory Detection Lab](lab-12-operation-blackout.md) |
 
 ## Scenario grouping
 
@@ -37,7 +38,9 @@ The Wazuh SOC detection series is organised as:
 
 Lab 9 sits outside the numbered scenario series because it focuses on vulnerability management and CVE triage rather than attack-detection simulation.
 
-Lab 11 is a broader Active Directory security project covering domain administration, Windows auditing, endpoint telemetry, attack simulation, and custom Wazuh detection engineering.\n\nLab 12, Operation Blackout, extends that environment with pfSense-controlled Corporate, Security, and Attack zones, then validates segmented Wazuh monitoring and tightly scoped adversary simulation.
+Lab 11 is a broader Active Directory security project covering domain administration, Windows auditing, endpoint telemetry, attack simulation, and custom Wazuh detection engineering.
+
+Lab 12, Operation Blackout, extends that environment with pfSense-controlled Corporate, Security, and Attack zones, then validates segmented Wazuh monitoring and tightly scoped adversary simulation.
 
 ## Current structure
 
@@ -57,6 +60,7 @@ cybersecurity-labs/
 ├── lab-9-wazuh-vulnerability-detection-cve-investigation.md
 ├── lab-10-wazuh-suricata-network-detection.md
 ├── lab-11-active-directory-wazuh-detection.md
+├── lab-12-operation-blackout.md
 ├── labs/
 │   ├── lab-01-juice-shop-recon-traffic-capture/
 │   │   ├── lab01-nmap-service-scan.txt
@@ -73,7 +77,9 @@ cybersecurity-labs/
 │   │   └── screenshots/
 │   ├── lab-10-wazuh-suricata-network-detection/
 │   │   └── screenshots/
-│   └── lab-11-active-directory-wazuh-detection/
+│   ├── lab-11-active-directory-wazuh-detection/
+│   │   └── screenshots/
+│   └── lab-12-operation-blackout/
 │       └── screenshots/
 └── scripts/
     └── reorganise-images.ps1
