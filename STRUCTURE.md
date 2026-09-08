@@ -1,6 +1,8 @@
 # Repository Structure
 
-This repository is organised as a cybersecurity portfolio rather than a loose file dump.
+This guide describes the portfolio layout and conventions for adding new labs.
+
+[Back to the portfolio](README.md)
 
 ## Current layout
 
@@ -24,6 +26,7 @@ Screenshot evidence is stored inside lab-specific folders under `labs/`, so the 
 | Lab 10 - Scenario 4 | Network IDS / SIEM integration | [Wazuh Suricata Network Detection Integration](lab-10-wazuh-suricata-network-detection.md) |
 | Lab 11 | Active Directory / detection engineering | [Active Directory Security Monitoring and Wazuh Detection Engineering](lab-11-active-directory-wazuh-detection.md) |
 | Lab 12 | Network segmentation / Active Directory detection | [Operation Blackout: Segmented Active Directory Detection Lab](lab-12-operation-blackout.md) |
+| Lab 13 | SOC investigation / containment | [Suspicious SMB Authentication Followed by Encoded PowerShell Discovery on WS01](lab-13-soc-incident-investigation.md) |
 
 ## Scenario grouping
 
@@ -41,6 +44,8 @@ Lab 9 sits outside the numbered scenario series because it focuses on vulnerabil
 Lab 11 is a broader Active Directory security project covering domain administration, Windows auditing, endpoint telemetry, attack simulation, and custom Wazuh detection engineering.
 
 Lab 12, Operation Blackout, extends that environment with pfSense-controlled Corporate, Security, and Attack zones, then validates segmented Wazuh monitoring and tightly scoped adversary simulation.
+
+Lab 13 uses the segmented environment for a complete SOC investigation, from authentication and process correlation through containment and verification.
 
 ## Current structure
 
@@ -61,6 +66,7 @@ cybersecurity-labs/
 ├── lab-10-wazuh-suricata-network-detection.md
 ├── lab-11-active-directory-wazuh-detection.md
 ├── lab-12-operation-blackout.md
+├── lab-13-soc-incident-investigation.md
 ├── labs/
 │   ├── lab-01-juice-shop-recon-traffic-capture/
 │   │   ├── lab01-nmap-service-scan.txt
@@ -79,13 +85,22 @@ cybersecurity-labs/
 │   │   └── screenshots/
 │   ├── lab-11-active-directory-wazuh-detection/
 │   │   └── screenshots/
-│   └── lab-12-operation-blackout/
+│   ├── lab-12-operation-blackout/
+│   │   └── screenshots/
+│   └── lab-13-soc-incident-investigation/
+│       └── screenshots/
+├── power-bi-dashboards/
+│   ├── financial-cybersecurity-risk-dashboard/
+│   │   ├── README.md
+│   │   └── screenshots/
+│   └── security-risk-overview-dashboard/
+│       ├── README.md
 │       └── screenshots/
 └── scripts/
     └── reorganise-images.ps1
 ```
 
-## Cleanup rules
+## Documentation conventions
 
 - Keep one clear README as the portfolio front page.
 - Keep each lab write-up consistent: objective, tools, steps, evidence, findings, conclusion, skills demonstrated.
@@ -93,3 +108,7 @@ cybersecurity-labs/
 - Avoid vague labels like `image1.png` where possible.
 - Use consistent lab numbering and scenario naming.
 - Do not delete screenshot evidence unless the relevant write-up has already been updated.
+
+- Link new reports from the main README and this lab index.
+- Use repository-relative links and check screenshot filenames before publishing.
+- Retain existing paths when tidying navigation so published links keep working.
